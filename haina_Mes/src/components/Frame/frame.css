@@ -1,0 +1,27 @@
+﻿
+.frame {
+	min-width: 1000px;
+	border: solid 1px #bababa;
+	margin: 15px;
+}
+
+
+	.frame .frame-title {
+		height: 42px;
+		background-color: #b6cee5;
+	}
+
+		.frame .frame-title p {
+			font-size: 16px;
+			font-weight: bold;
+			color: #484848;
+			font-family: SimSun;
+			line-height: 42px;
+			text-indent: 1em;
+		}
+
+
+	.frame .frame-content {
+		/*min-height: 500px;*/
+		padding: 10px 20px 20px 20px;
+	}
