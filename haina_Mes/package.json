@@ -3,11 +3,12 @@
  "version": "0.1.0",
  "description": "It is based on my previous project.Structured By ReactJs.",
  "main": "index.js",
- "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "react-scripts start",
-  "dev": "webpack-dev-server --open --history-api-fallback --config webpack.config.js"
- },
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "react-scripts start",
+		"dev": "webpack-dev-server --open --history-api-fallback --config webpack.config.js",
+		"build": "react-scripts build"
+	},
  "author": "zbc",
  "license": "ISC",
  "dependencies": {
