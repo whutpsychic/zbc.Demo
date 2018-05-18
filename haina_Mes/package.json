@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "It is based on my previous project.Structured By ReactJs.",
 	"main": "index.js",
-	"homepage": "http://whutpsychic.github.io/hnmes",
+	"homepage": "http://whutpsychic.github.io/zbc.Demo/haina_Mes/build",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "react-scripts start",
