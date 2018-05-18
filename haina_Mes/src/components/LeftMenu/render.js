@@ -6,22 +6,18 @@ import tool from '../../tool';
 import './leftmenu.css';
 import icon from './icons/collapse.png';
 
-class Item extends Component {
+
+
+class Item2 extends Component {
 
 
 	render() {
 
-		const { children, to, active } = this.props;
-		const position = "/" + window.location.pathname.split('/')[1] + "/" + window.location.pathname.split('/')[2];
+		console.log()
+		const { to, children } = this.props;
 
-		if (active)
-			return (
-				<li className="active">
-					<Link to={position + '/' + to}>
-						{children}
-					</Link>
-				</li>
-			)
+		const position = "/" + window.location.pathname.split('/')[1] +"/" + window.location.pathname.split('/')[2] + "/" + window.location.pathname.split('/')[3];
+
 		return (
 			<li>
 				<Link to={position + '/' + to}>
@@ -29,6 +25,49 @@ class Item extends Component {
 				</Link>
 			</li>
 			)
+	}
+
+
+
+}
+
+class Item extends Component {
+
+	render() {
+
+		const { children, kids, to, active } = this.props;
+		const position = "/" + window.location.pathname.split('/')[1] + "/" + window.location.pathname.split('/')[2];
+
+		let _cls = ""; 
+		let _ul2cls = "left-menu-level2";
+
+		if (active) {
+			_cls += "active";
+			return (
+				<li className={_cls}>
+					<Link to={position + '/' + to}>
+						{children}
+					</Link>
+					<ul className={_ul2cls}>
+						{
+							kids.map((item, index) => {
+								return <Item2 key={index} to={item.name}>{item.text}</Item2>
+							})
+						}
+					</ul>
+				</li>
+			)
+		}
+
+		return (
+			<li className={_cls}>
+				<Link to={position + '/' + to}>
+					{children}
+				</Link>
+			</li>
+		)
+
+
 	}
 
 
@@ -50,12 +89,12 @@ class LeftMenu extends Component {
 					<img src={icon} alt="缩进" />
 					<span>{title}</span>
 				</div>
-				<ul>
+				<ul className="left-menu-level1">
 					{
 						list.map((item, index) => {
 							if (_loc === item.name)
-								return <Item key={index} to={item.name} active>{item.text}</Item>
-							return <Item key={index} to={item.name}>{item.text}</Item>
+								return <Item key={index} to={item.name} kids={item.children || []} active>{item.text}</Item>
+							return <Item key={index} to={item.name} kids={item.children || []}>{item.text}</Item>
 						})
 					}
 				</ul>

@@ -32,7 +32,8 @@ class Quality extends Component {
 
 				<Switch>
 					<Route exact path="/main/plan/query" component={PlanQuery}></Route>
-					<Redirect from="/main/plan" to="/main/plan/query" />
+					<Route exact path="/main/plan/edit" component={PlanQuery}></Route>
+					<Redirect exact from="/main/plan" to="/main/plan/query" />
 
 					<Route component={NOTFOUND}></Route>
 

@@ -2,9 +2,10 @@
 .left-menu {
 	float: left;
 	background-color: #a5bad0;
+	width:220px;
 }
 
-	.left-menu li {
+	.left-menu .left-menu-level1 > li {
 		width: 220px;
 		height: 48px;
 		line-height: 48px;
@@ -12,23 +13,23 @@
 		border-bottom: solid 2px #b7cbdf;
 	}
 
-		.left-menu li.active {
+		.left-menu .left-menu-level1 > li.active {
 			background-color: #fff;
 			border-left: solid 5px orange;
 		}
 
-		.left-menu li.active a {
-			color: #108803;
-			font-weight:bold;
-		}
+	.left-menu .left-menu-level1 li.active > a {
+		color: #108803;
+		font-weight: bold;
+	}
 
-		.left-menu li > a {
-			display: block;
-			color: #484848;
-			font-size: 16px;
-			width: 100%;
-			height: 100%;
-		}
+	.left-menu .left-menu-level1 li > a {
+		display: block;
+		color: #484848;
+		font-size: 16px;
+		width: 100%;
+		height: 100%;
+	}
 
 	.left-menu .menu-title {
 		height: 70px;
@@ -60,7 +61,20 @@
 }
 
 
+ul.left-menu-level2 {
+	display:block;
+	position:relative;
+	left:-5px;
+}
 
+	ul.left-menu-level2 > li {
+		background-color: #fff;
+		border-left: solid 5px orange;
+		width: 100%;
+	}
 
-
+		ul.left-menu-level2 > li > a {
+			color: #007295;
+			font-weight: lighter;
+		}
 

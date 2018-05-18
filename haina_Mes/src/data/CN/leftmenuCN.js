@@ -15,9 +15,18 @@ var leftmenuCN = [
 		name: "plan",
 		text: "生产计划",
 		children: [
-			{ name: "query", text: "计划查询" },
+			{
+				name: "query", text: "计划查询",
+			},
+			{
+				name: "edit", text: "计划编制", children: [
+					{ name: "year", text: "年计划" },
+					{ name: "month", text: "月计划" },
+					{ name: "date", text: "日计划" }
+				]
+			}
 		]
-	}
+	},
 
 
 ];
