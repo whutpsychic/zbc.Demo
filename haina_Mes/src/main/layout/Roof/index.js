@@ -42,8 +42,11 @@ class TopBar extends Component {
 	clickUser() {
 
 	}
-	clickExit() {
 
+	clickExit() {
+		//console.log(window.location.origin);
+		//console.log(window.location.pathname);
+		window.location.href = window.location.origin
 	}
 }
 

@@ -6,15 +6,14 @@ import { LeftMenu } from '../../../components';
 import tool from '../../../tool';
 import { leftmenuCN } from '../../../data/CN';
 
-import { QualityQuery } from './query';
-import { QualityAnalyze } from './analyze';
-import { QualityScore } from './score';
-import { QualityStandard } from './standard';
+import { EnergyMonitor} from './monitor';
+import { EnergyAnalyzePie } from './analyze';
+import { EnergyAnalyzeTrend } from './analyze';
 
 import { NOTFOUND } from '../../pages';
 
 
-class Quality extends Component {
+class Energy extends Component {
 
 	constructor() {
 		super(...arguments);
@@ -34,15 +33,14 @@ class Quality extends Component {
 				<LeftMenu list={menuList} title={menuTitle} />
 
 				<Switch>
-					<Route exact path="/main/quality/query" component={QualityQuery}></Route>
-					<Route exact path="/main/quality/analyze" component={QualityAnalyze}></Route>
-					<Route exact path="/main/quality/standard" component={QualityStandard}></Route>
-					<Route exact path="/main/quality/score" component={NOTFOUND}></Route>
+					<Route exact path="/main/energy/monitor" component={EnergyMonitor}></Route>
+					<Route exact path="/main/energy/analyze/pie" component={EnergyAnalyzePie}></Route>
+					<Route exact path="/main/energy/analyze/trend" component={EnergyAnalyzeTrend}></Route>
 
-					<Redirect from="/main/quality" to="/main/quality/query" />
+					<Redirect exact from="/main/energy" to="/main/energy/monitor" />
+					<Redirect from="/main/energy/analyze" to="/main/energy/analyze/pie" />
 
 					<Route component={NOTFOUND}></Route>
-
 				</Switch>
 			</div>
 			)
@@ -55,4 +53,4 @@ class Quality extends Component {
 
 }
 
-export default Quality;
+export default Energy;

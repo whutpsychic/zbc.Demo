@@ -52,15 +52,25 @@ class DataBar extends Component{
 		const { columns } = this.props || [];
 		const { operations } = this.props || [];
 
+		let _op = () => {
+
+			if (operations.length)
+				return (
+					<Td>
+						{
+							operations.map((item, index) => {
+								return <a key={index} onClick={item.fn(data)}>{item.text}</a>
+							})
+						}
+					</Td>
+				)
+
+			return;
+		}
+
 		return (
 			<tr>
-				<Td>
-					{
-						operations.map((item,index) => {
-							return <a key={index} onClick={item.fn(data)}>{item.text}</a>
-						})
-					}
-				</Td>
+				{_op}
 				{
 					columns.map((item, index) => {
 

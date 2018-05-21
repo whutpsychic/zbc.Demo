@@ -23,11 +23,12 @@ class Page extends Component {
 	render() {
 
 		const frame_style = { height: "auto" };
+		const _pageStyle = { height: "780px" };
 
 		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
 
 		return (
-			<div className="with-left-menu">
+			<div className="with-left-menu" style={_pageStyle}>
 				<Frame title="月计划编制" style={frame_style}>
 					<TopBar>
 						<Select label="计划类别" data={select1Data} />

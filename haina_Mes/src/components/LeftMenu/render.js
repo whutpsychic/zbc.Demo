@@ -79,8 +79,12 @@ class LeftMenu extends Component {
 		const { list, title } = this.props;
 		const _loc = tool.getcurrMenuByLevel(3)
 
+		let _style = {};
+
+		if (!list.length) _style = { display: "none" };
+
 		return (
-			<div className="left-menu">
+			<div className="left-menu" style={_style}>
 				<div className="menu-title">
 					<img src={icon} alt="缩进" />
 					<span>{title}</span>

@@ -197,6 +197,14 @@ tool.getDate = function (obj) {
 
 }
 
+//返回一个随机数
+//min
+//max
+tool.getRandom = (min, max) => {
+	var __temp__ = (min + (max - min) * Math.random()).toFixed(2);
+	return __temp__;
+}
+
 //返回一个随机数组
 //0：多少个
 //1：最小值
@@ -216,6 +224,23 @@ tool.getRandomArr = (num, min, max) => {
 	return _arr;
 }
 
+//nums:产生个数
+//timeA:前置数字
+//timeB:后置数字
+//linker:连接符
+tool.getConstantTimes = function (obj) {
+
+	var __temp__ = [];
+	var i = 0;
+
+	for (; i < obj.nums; i++) {
+		__temp__.push(obj.timeA + obj.linker + (obj.timeB + i));
+
+	}
+
+	return __temp__;
+
+}
 
 tool.putOn = {
 
@@ -378,7 +403,7 @@ tool.putOn = {
 	//(ok)
 	pie1 : function (x) {
 		var _option = {
-			color: ['#63a5c8', '#e8c888', '#bb99cb'],
+			color: ['#63a5c8', '#e8c888', '#bb99cb','#9a110d','lightgreen','red'],
 			legend: {
 				textStyle: { color: '#666', fontSize: 14 }, orient: 'vertical',
 				top: '8%', right: '5%'

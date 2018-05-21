@@ -6,15 +6,13 @@ import { LeftMenu } from '../../../components';
 import tool from '../../../tool';
 import { leftmenuCN } from '../../../data/CN';
 
-import { QualityQuery } from './query';
-import { QualityAnalyze } from './analyze';
-import { QualityScore } from './score';
-import { QualityStandard } from './standard';
+import { GradesAnalyze } from './analyze';
+import { GradesProccess } from './proccess';
 
 import { NOTFOUND } from '../../pages';
 
 
-class Quality extends Component {
+class Energy extends Component {
 
 	constructor() {
 		super(...arguments);
@@ -34,15 +32,12 @@ class Quality extends Component {
 				<LeftMenu list={menuList} title={menuTitle} />
 
 				<Switch>
-					<Route exact path="/main/quality/query" component={QualityQuery}></Route>
-					<Route exact path="/main/quality/analyze" component={QualityAnalyze}></Route>
-					<Route exact path="/main/quality/standard" component={QualityStandard}></Route>
-					<Route exact path="/main/quality/score" component={NOTFOUND}></Route>
+					<Route exact path="/main/grades/analyze" component={GradesAnalyze}></Route>
+					<Route exact path="/main/grades/proccess" component={GradesProccess}></Route>
 
-					<Redirect from="/main/quality" to="/main/quality/query" />
+					<Redirect exact from="/main/grades" to="/main/grades/analyze" />
 
 					<Route component={NOTFOUND}></Route>
-
 				</Switch>
 			</div>
 			)
@@ -55,4 +50,4 @@ class Quality extends Component {
 
 }
 
-export default Quality;
+export default Energy;

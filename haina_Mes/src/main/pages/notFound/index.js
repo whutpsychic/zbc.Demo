@@ -7,7 +7,8 @@ class NOTFOUND extends Component {
 	render() {
 
 		const _style = {
-			textAlign: "center"
+			textAlign: "center",
+			backgroundColor:"#fff"
 		}
 
 		const imgStyle = { marginTop: "100px" };
