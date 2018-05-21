@@ -16,6 +16,7 @@
 		.left-menu .left-menu-level1 > li.active {
 			background-color: #fff;
 			border-left: solid 5px orange;
+			height: 100%;
 		}
 
 	.left-menu .left-menu-level1 li.active > a {
@@ -71,6 +72,7 @@ ul.left-menu-level2 {
 		background-color: #fff;
 		border-left: solid 5px orange;
 		width: 100%;
+		text-indent:4em;
 	}
 
 		ul.left-menu-level2 > li > a {
@@ -78,3 +80,8 @@ ul.left-menu-level2 {
 			font-weight: lighter;
 		}
 
+.left-menu .left-menu-level2 li.active > a{
+	font-weight:normal;
+	color: #007295;
+	cursor: default;
+}

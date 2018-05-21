@@ -1,4 +1,4 @@
 ﻿
-import { Page as PlanQuery } from './render.js';
+import { Page as DatePage } from './render.js';
 
-export { PlanQuery };
+export { DatePage };

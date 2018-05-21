@@ -24,7 +24,10 @@ var leftmenuCN = [
 					{ name: "month", text: "月计划" },
 					{ name: "date", text: "日计划" }
 				]
-			}
+			},
+			{
+				name: "monitor", text: "计划跟踪监控",
+			},
 		]
 	},
 

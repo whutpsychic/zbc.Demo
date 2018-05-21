@@ -7,30 +7,29 @@ import './leftmenu.css';
 import icon from './icons/collapse.png';
 
 
-
+//二级菜单项
 class Item2 extends Component {
-
 
 	render() {
 
-		console.log()
 		const { to, children } = this.props;
+		const position = "/" + window.location.pathname.split('/')[1] + "/" + window.location.pathname.split('/')[2] + "/" + window.location.pathname.split('/')[3];
+		const _curr = window.location.pathname.split('/')[4];
 
-		const position = "/" + window.location.pathname.split('/')[1] +"/" + window.location.pathname.split('/')[2] + "/" + window.location.pathname.split('/')[3];
+		let _cls = "";
+		if (to === _curr) _cls = 'active';
 
 		return (
-			<li>
+			<li className={_cls}>
 				<Link to={position + '/' + to}>
 					{children}
 				</Link>
 			</li>
 			)
 	}
-
-
-
 }
 
+//一级菜单项
 class Item extends Component {
 
 	render() {
@@ -70,12 +69,9 @@ class Item extends Component {
 
 	}
 
-
-
-
-
 }
 
+//整体menu对象
 class LeftMenu extends Component {
 
 	render() {

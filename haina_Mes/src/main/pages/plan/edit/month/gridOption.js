@@ -22,7 +22,8 @@ const gridOption = {
 	],
 
 	operations: [
-		{ text: "查看详情", fn: look}
+		{ text: "编辑", fn: look},
+		{ text: "删除", fn: look}
 	],
 
 	columns: [
@@ -33,31 +34,31 @@ const gridOption = {
 			//}
 		},
 		{
-			title: "产品名称",
+			title: "起始时间",
 			name: "string1",
 		},
 		{
-			title: "所属分厂",
+			title: "结束时间",
 			name: "string2",
 		},
 		{
-			title: "计量单位",
+			title: "名称",
 			name: "string3",
 		},
 		{
-			title: "日产量",
+			title: "车间",
 			name: "string4",
 		},
 		{
-			title: "月累计",
+			title: "产品名称",
 			name: "string5",
 		},
 		{
-			title: "完成月计划（%）",
+			title: "销售计划",
 			name: "string6",
 		},
 		{
-			title: "库存",
+			title: "备注",
 			name: "string7",
 		}
 

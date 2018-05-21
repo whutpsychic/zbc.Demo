@@ -22,8 +22,8 @@ const gridOption = {
 	],
 
 	operations: [
-		{ text: "编辑", fn: look},
-		{ text: "删除", fn: look}
+		{ text: "编辑", fn: look },
+		{ text: "删除", fn: look }
 	],
 
 	columns: [
@@ -34,23 +34,23 @@ const gridOption = {
 			//}
 		},
 		{
-			title: "名称",
+			title: "起始时间",
 			name: "string1",
 		},
 		{
-			title: "车间",
+			title: "结束时间",
 			name: "string2",
 		},
 		{
-			title: "产品名称",
+			title: "名称",
 			name: "string3",
 		},
 		{
-			title: "单位",
+			title: "车间",
 			name: "string4",
 		},
 		{
-			title: "产量计划",
+			title: "产品名称",
 			name: "string5",
 		},
 		{
@@ -58,7 +58,7 @@ const gridOption = {
 			name: "string6",
 		},
 		{
-			title: "审批状态",
+			title: "备注",
 			name: "string7",
 		}
 

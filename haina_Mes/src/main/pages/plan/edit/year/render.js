@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Frame } from '../../../../../components';
 import { Grid } from '../../../../../components';
 import { TopBar, Select, Input, Date, Button } from '../../../../../components';
-import { Chart } from '../../../../../components';
 
 import tool from '../../../../../tool';
 import DATA from './data.js';
@@ -17,14 +16,7 @@ class Page extends Component {
 
 		this.state = {
 			select1Data: DATA.select1,
-			select2Data: DATA.select2,
-			select3Data: DATA.select3,
-			select4Data: DATA.select4,
-			select5Data: DATA.select5,
-
-			chart1style: {height:"350px"},
-			chart2style: {height:"400px"},
-			chart3style: {height:"380px"}
+			select2Data: DATA.select2
 		}
 	}
 
@@ -36,27 +28,17 @@ class Page extends Component {
 
 		return (
 			<div className="with-left-menu">
-				<Frame title="生产计划查询" style={frame_style}>
+				<Frame title="年计划编制" style={frame_style}>
 					<TopBar>
 						<Select label="计划类别" data={select1Data}/>
-						<Select label="计划类型" data={select2Data}/>
-						<Select label="分厂" data={select3Data}/>
-						<Select label="车间" data={select4Data}/>
-						<Select label="产品" data={select5Data}/>
-						<Date label="起始时间"/>
-						<Date label="终止时间" />
+						<Select label="年份" data={select2Data}/>
+						<Button text="新增"/>
+						<Button text="生成"/>
+						<Button text="计划分解"/>
+						<Button text="计划发布"/>
 						<Button text="查询"/>
 					</TopBar>
 					<Grid option={gridOption} data={DATA.grid}/>
-				</Frame>
-				<Frame title="产量统计">
-					<Chart option={DATA.getchart1Option()} style={this.state.chart1style} />
-				</Frame>
-				<Frame title="完成年计划(%)">
-					<Chart option={DATA.getchart2Option()} style={this.state.chart2style} />
-				</Frame>
-				<Frame title="出入库统计">
-					<Chart option={DATA.getchart3Option()} style={this.state.chart3style} />
 				</Frame>
 
 			</div>
