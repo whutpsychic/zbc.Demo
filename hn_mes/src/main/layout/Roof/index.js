@@ -46,7 +46,8 @@ class TopBar extends Component {
 	clickExit() {
 		//console.log(window.location.origin);
 		//console.log(window.location.pathname);
-		window.location.href = window.location.origin
+		//window.location.href = window.location.origin	//本地
+		window.location.href = window.location.origin +"/zbc.Demo/hn_mes/build/"//github
 	}
 }
 
