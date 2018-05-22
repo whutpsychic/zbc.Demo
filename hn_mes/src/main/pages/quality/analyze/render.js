@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 
 import { Frame } from '../../../../components';
 import { Chart } from '../../../../components';
-import { TopBar, Select, Input, Date, Button } from '../../../../components';
+import { TopBar, Select, Date, Button } from '../../../../components';
 
-import tool from '../../../../tool';
 import DATA from './data.js';
 
 class Page extends Component {

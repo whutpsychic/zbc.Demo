@@ -1,7 +1,8 @@
 ﻿.header {
 	height: 130px;
 	background-image: url(./images/header.png);
-	text-align:center;
+	text-align: center;
+	min-width: 1300px;
 }
 
 	.header > img {
@@ -14,7 +15,6 @@
 	}
 
 		.header ul li {
-			/*padding: 15px;*/
 			height: 130px;
 			width: 110px;
 			line-height: 38px;
@@ -27,6 +27,8 @@
 		}
 			.header ul li.active {
 				background-image: url(./images/mfr1bg.png);
+				height: 100%;
+				padding: 10px 0;
 			}
 			.header ul li:hover {
 				background-image: url(./images/mfr1bg.png);

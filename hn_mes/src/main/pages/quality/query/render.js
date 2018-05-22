@@ -5,7 +5,6 @@ import { Frame } from '../../../../components';
 import { Grid } from '../../../../components';
 import { TopBar, Select, Input, Date, Button } from '../../../../components';
 
-import tool from '../../../../tool';
 import DATA from './data.js';
 import gridOption from './gridOption.js';
 

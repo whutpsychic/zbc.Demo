@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './app.css';
 import { connect } from 'react-redux';
 
-import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './login';
 import Main from './main';
 

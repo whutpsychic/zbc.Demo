@@ -22,12 +22,12 @@ var _handlersHelper = {
 				}
 
 				//如果obj1是字符串,obj2直接覆盖obj1
-				if (typeof _obj[k] == 'string' || typeof _obj[k] == 'number') {
+				if (typeof _obj[k] === 'string' || typeof _obj[k] === 'number') {
 					_obj[k] = obj2[k];
 				}
 
 				//如果obj1是对象obj2是字符串,obj1覆盖obj2
-				else if (typeof obj1[k] == 'object' && typeof obj2[k] !== 'object') {
+				else if (typeof obj1[k] === 'object' && typeof obj2[k] !== 'object') {
 					continue;
 				}
 
@@ -52,12 +52,12 @@ var _handlersHelper = {
 				for (var j in arguments[i]) {
 
 					//如果_temp[j]是obj且arguments[i][j]是string,
-					if (typeof _temp[j] == 'object' && typeof arguments[i][j] == 'string') {
+					if (typeof _temp[j] === 'object' && typeof arguments[i][j] === 'string') {
 						;
 					}
 
 					//如果都是obj
-					else if (typeof _temp[j] == 'object' && typeof arguments[i][j] == 'object') {
+					else if (typeof _temp[j] === 'object' && typeof arguments[i][j] === 'object') {
 						_temp[j] = zMultiplex(_temp[j], arguments[i][j]);
 					}
 
@@ -73,8 +73,8 @@ var _handlersHelper = {
 
 		//不是深度覆盖
 		else {
-			for (var i = 1; i < arguments.length - 1; i++) {
-				for (var j in arguments[i]) {
+			for (let i = 1; i < arguments.length - 1; i++) {
+				for (let j in arguments[i]) {
 					_temp[j] = arguments[i][j];
 				}
 			}

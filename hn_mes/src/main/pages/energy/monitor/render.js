@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Frame } from '../../../../components';
 import { TopBar, Select, Button } from '../../../../components';
 
-import tool from '../../../../tool';
 import DATA from './data.js';
 
 import img from './bg.png';
@@ -27,7 +26,7 @@ class Page extends Component {
 		const frame_style = { height: "auto" };
 		const img_style = { width: "100%" };
 
-		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
+		const { select1Data, select2Data, select3Data } = this.state;
 
 		return (
 			<div className="with-left-menu">

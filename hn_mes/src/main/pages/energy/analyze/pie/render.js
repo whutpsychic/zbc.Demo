@@ -5,7 +5,6 @@ import { Frame } from '../../../../../components';
 import { TopBar, Select, Date, Button } from '../../../../../components';
 import { Chart } from '../../../../../components';
 
-import tool from '../../../../../tool';
 import DATA from './data.js';
 
 class Page extends Component {
@@ -27,7 +26,7 @@ class Page extends Component {
 
 		const frame_style = { height: "755px" };
 
-		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
+		const { select1Data, select2Data, select3Data, select4Data } = this.state;
 
 		return (
 			<div className="with-left-menu">

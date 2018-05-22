@@ -1,5 +1,4 @@
 ﻿
-import tool from '../../../../tool';
 
 const DATA = {
 

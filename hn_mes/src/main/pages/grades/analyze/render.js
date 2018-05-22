@@ -6,7 +6,6 @@ import { Grid } from '../../../../components';
 import { Chart } from '../../../../components';
 import { TopBar, Select, Button } from '../../../../components';
 
-import tool from '../../../../tool';
 import DATA from './data.js';
 
 import gridOption from './gridOption.js';

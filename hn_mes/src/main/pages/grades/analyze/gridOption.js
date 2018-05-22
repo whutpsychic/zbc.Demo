@@ -1,11 +1,4 @@
 ﻿
-var look = function (data) {
-	//console.log('加载look函数')
-	return function () {
-		console.log(data)
-	}
-}
-
 const gridOption = {
 
 	fields: [

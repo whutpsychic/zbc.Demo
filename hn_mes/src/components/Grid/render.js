@@ -54,7 +54,7 @@ class DataBar extends Component{
 
 		let _op = () => {
 
-			if (operations.length)
+			if (operations&&operations.length)
 				return (
 					<Td>
 						{
@@ -70,11 +70,11 @@ class DataBar extends Component{
 
 		return (
 			<tr>
-				{_op}
+				{_op()}
 				{
 					columns.map((item, index) => {
 
-						if (!item.name) return;
+						if (!item.name) return null;
 
 						if (typeof item.render === "function") {
 							return (

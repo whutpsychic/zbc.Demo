@@ -41,10 +41,8 @@ class MenuItem extends Component {
 		if (position === loc)
 			return (
 				<li className="active">
-					<Link to={loc} onClick={this.clickMenu.bind(this)}>
-						<img alt={text} src={icon} />
-						<nobr>{text}</nobr>
-					</Link>
+					<img alt={text} src={icon} />
+					<nobr>{text}</nobr>
 				</li>
 			)
 
@@ -62,6 +60,10 @@ class MenuItem extends Component {
 		const { loc } = this.props;
 		const { onClick } = this.props;
 		onClick(loc)
+	}
+
+	clickMenuActive() {
+		return;
 	}
 
 }

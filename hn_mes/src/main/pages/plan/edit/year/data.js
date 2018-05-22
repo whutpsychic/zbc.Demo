@@ -1,5 +1,4 @@
-﻿import tool from '../../../../../tool';
-const DATA = {
+﻿const DATA = {
 
 	select1: [
 		{ text: "年计划" },

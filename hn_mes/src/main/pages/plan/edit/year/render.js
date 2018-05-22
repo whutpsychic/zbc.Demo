@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 
 import { Frame } from '../../../../../components';
 import { Grid } from '../../../../../components';
-import { TopBar, Select, Input, Date, Button } from '../../../../../components';
+import { TopBar, Select, Button } from '../../../../../components';
 
-import tool from '../../../../../tool';
 import DATA from './data.js';
 import gridOption from './gridOption.js';
 
@@ -25,7 +24,7 @@ class Page extends Component {
 		const frame_style = { height: "auto" };
 		const _pageStyle = { height: "780px" };
 
-		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
+		const { select1Data, select2Data } = this.state;
 
 		return (
 			<div className="with-left-menu" style={_pageStyle}>

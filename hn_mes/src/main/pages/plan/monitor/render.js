@@ -2,10 +2,9 @@
 import React, { Component } from 'react';
 
 import { Frame } from '../../../../components';
-import { TopBar, Select, Date, Button } from '../../../../components';
+import { TopBar, Select, Button } from '../../../../components';
 import { Chart } from '../../../../components';
 
-import tool from '../../../../tool';
 import DATA from './data.js';
 
 class Page extends Component {
@@ -28,7 +27,7 @@ class Page extends Component {
 		const frame2_style = { marginLeft: "520px", minWidth: "unset", height: "480px"};
 		const frame3_style = { };
 
-		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
+		const { select1Data } = this.state;
 
 		return (
 			<div className="with-left-menu">

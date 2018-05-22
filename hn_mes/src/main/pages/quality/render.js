@@ -8,7 +8,6 @@ import { leftmenuCN } from '../../../data/CN';
 
 import { QualityQuery } from './query';
 import { QualityAnalyze } from './analyze';
-import { QualityScore } from './score';
 import { QualityStandard } from './standard';
 
 import { NOTFOUND } from '../../pages';
