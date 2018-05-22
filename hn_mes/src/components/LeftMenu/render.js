@@ -13,8 +13,8 @@ class Item2 extends Component {
 	render() {
 
 		const { to, children } = this.props;
-		const position = "/" + window.location.pathname.split('/')[1] + "/" + window.location.pathname.split('/')[2] + "/" + window.location.pathname.split('/')[3];
-		const _curr = window.location.pathname.split('/')[4];
+		const position = "/" + window.location.hash.split('/')[1] + "/" + window.location.hash.split('/')[2] + "/" + window.location.hash.split('/')[3];
+		const _curr = window.location.hash.split('/')[4];
 
 		let _cls = "";
 		if (to === _curr) _cls = 'active';
@@ -35,7 +35,7 @@ class Item extends Component {
 	render() {
 
 		const { children, kids, to, active } = this.props;
-		const position = "/" + window.location.pathname.split('/')[1] + "/" + window.location.pathname.split('/')[2];
+		const position = "/" + window.location.hash.split('/')[1] + "/" + window.location.hash.split('/')[2];
 
 		let _cls = ""; 
 		let _ul2cls = "left-menu-level2";

@@ -141,7 +141,7 @@ tool.getcurrMenuByLevel = (x) => {
 
 	if (typeof x !== "number") throw new Error("tool getcurrMenuByLevel 函数传入的x不是一个数字")
 
-	return window.location.pathname.split('/')[x];
+	return window.location.hash.split('/')[x];
 }
 
 //根据当前二级目录找出所有三级目录项
