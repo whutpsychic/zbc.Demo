@@ -1,0 +1,33 @@
+﻿.tips {
+	display: block;
+	background-color: yellow;
+	color: #000;
+	overflow: hidden;
+	font-size:14px;
+	line-height:20px;
+	height:20px;
+	text-indent:2em;
+}
+
+.sertIn-enter,
+.sertIn-appear {
+	height: 0;
+	transition: .5s;
+}
+
+	.sertIn-enter.sertIn-enter-active,
+	.sertIn-appear.sertIn-appear-active {
+		height: 20px;
+		transition: .5s;
+	}
+
+.sertIn-leave {
+	height: 20px;
+	transition: .5s;
+}
+
+	.sertIn-leave.sertIn-leave-active {
+		height: 0;
+		transition: height .5s ease-in;
+	}
+

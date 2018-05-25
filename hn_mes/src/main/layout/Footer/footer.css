@@ -1,0 +1,12 @@
+﻿.bottom-bar {
+	background: linear-gradient(#a5bad0 10%, #274977 100%);
+	padding: 1.2em 20em;
+	color: #fff;
+	line-height: 1.6em;
+	text-align: center;
+}
+
+	.bottom-bar p {
+		color: #fff;
+		font-size: 14px;
+	}
