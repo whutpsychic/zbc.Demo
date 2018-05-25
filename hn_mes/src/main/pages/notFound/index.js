@@ -8,7 +8,8 @@ class NOTFOUND extends Component {
 
 		const _style = {
 			textAlign: "center",
-			backgroundColor:"#fff"
+			backgroundColor: "#fff",
+			height:"700px"
 		}
 
 		const imgStyle = { marginTop: "100px" };
