@@ -1,4 +1,5 @@
-﻿import { LeftMenu } from './LeftMenu';
+﻿//import { LeftMenu } from './LeftMenu';
+import { LeftMenu } from './LeftMenu2';
 
 import Frame from './Frame';
 
