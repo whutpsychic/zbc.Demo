@@ -1,5 +1,10 @@
 ﻿
 
+import message from 'antd/lib/message';
+
+message.config({
+	duration:30
+})
 
 const Navigator = {
 
@@ -41,8 +46,7 @@ const Navigator = {
         var ie7Exp = /MSIE 7.0;/;
 
         //抽出版本串
-        var theVersion = window.navigator.appVersion;
-
+				var theVersion = window.navigator.appVersion;
 
         //审查对象
         var checkOut;
@@ -95,8 +99,17 @@ const Navigator = {
                 that.ver = 'IE7';
             }
             else {
-                console.log('此乃未知版本的旧时代浏览器');
-            }
+							console.log('此乃未知版本的浏览器');
+							message.info(window.navigator.appCodeName);
+							message.info(window.navigator.appName);
+							message.info(window.navigator.appVersion);
+							message.info(window.navigator.platform);
+							message.info(window.navigator.product);
+							message.info(window.navigator.productSub);
+							message.info(window.navigator.userAgent);
+							message.info(window.navigator.vendor);
+							message.info(window.navigator.vendorSub);
+						}
         }
     },
 

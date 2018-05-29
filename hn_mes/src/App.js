@@ -46,6 +46,9 @@ class App extends Component {
 			message.info('您正在使用的是 ' + v + ' 浏览器');
 		})
 
+		message.config({
+			duration: 4
+		})
 	}
 
 }
