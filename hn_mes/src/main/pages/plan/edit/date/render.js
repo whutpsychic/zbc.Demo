@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { Frame } from '../../../../../components';
 import { Grid } from '../../../../../components';
-import { TopBar, Select, Date, Button } from '../../../../../components';
+import { TopBar, Select, DateRange, Button } from '../../../../../components';
 
 import DATA from './data.js';
 import gridOption from './gridOption.js';
@@ -30,8 +30,7 @@ class Page extends Component {
 				<Frame title="日计划编制" style={frame_style}>
 					<TopBar>
 						<Select label="计划类别" data={select1Data} />
-						<Date label="起始日期" />
-						<Date label="结束日期" />
+						<DateRange label="日期选择" />
 						<Button text="新增" />
 						<Button text="生成" />
 						<Button text="计划分解" />

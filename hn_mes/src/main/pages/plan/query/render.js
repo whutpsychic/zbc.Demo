@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { Frame } from '../../../../components';
 import { Grid } from '../../../../components';
-import { TopBar, Select, Date, Button } from '../../../../components';
+import { TopBar, Select, Button, DateRange } from '../../../../components';
 import { Chart } from '../../../../components';
 
 import DATA from './data.js';
@@ -42,8 +42,7 @@ class Page extends Component {
 						<Select label="分厂" data={select3Data}/>
 						<Select label="车间" data={select4Data}/>
 						<Select label="产品" data={select5Data}/>
-						<Date label="起始时间"/>
-						<Date label="终止时间" />
+						<DateRange label="时间选择"/>
 						<Button text="查询"/>
 					</TopBar>
 					<Grid option={gridOption} data={DATA.grid}/>

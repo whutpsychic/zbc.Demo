@@ -28,8 +28,8 @@ table.z-Grid {
 .z-Grid th {
 	padding: 4px 0;
 	border: 1px solid #d7d7d7;
-	border-bottom: 3px solid #d7d7d7;
-	font-size: 16px;
+	border-bottom: 2px solid #d7d7d7;
+	font-size: 14px;
 	line-height: 40px;
 	font-family: SimSun;
 	font-weight: bold;
@@ -43,16 +43,17 @@ table.z-Grid {
 	border-left: 1px solid #d7d7d7;
 	border-right: 1px solid #d7d7d7;
 	line-height: 30px;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: SimSun;
 	color: #757575;
 }
 
-.z-Grid td a {
-	text-decoration:underline;
-	color:#389edc;
-	margin:0 4px;
-}
+	.z-Grid td a {
+		text-decoration: underline;
+		color: #389edc;
+		margin: 0 4px;
+		font-size: 14px;
+	}
 
 	.z-Grid td a:active{
 		color: blue;

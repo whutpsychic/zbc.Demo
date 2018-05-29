@@ -18,9 +18,9 @@ const DATA = {
 		{ text: "脱盐水" }
 	],
 	select4: [
-		{ text: "天级" },
-		{ text: "月级" },
-		{ text: "日级" }
+		{ text: "天级", value: 1},
+		{ text: "月级", value: 2},
+		{ text: "年级", value: 3}
 	],
 
 	getChartOption:() => {

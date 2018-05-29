@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import { Frame } from '../../../../components';
 import { Chart } from '../../../../components';
-import { TopBar, Select, Date, Button } from '../../../../components';
+import { TopBar, Select, DateRange, Button } from '../../../../components';
 
 import DATA from './data.js';
 
@@ -33,12 +33,8 @@ class Page extends Component {
 						<Select label="选择车间" data={select1Data}/>
 						<Select label="选择产品" data={select2Data}/>
 						<Select label="班组" data={select3Data} />
-						<Date label="起始时间"/>
-						<Date label="终止时间" />
+						<DateRange label="时间选择"/>
 						<Button text="查询"/>
-						<Button text="天级"/>
-						<Button text="月级"/>
-						<Button text="年级"/>
 					</TopBar>
 					<Chart option={DATA.echartOption()} style={{ height: "600px"}}/>
 				</Frame>

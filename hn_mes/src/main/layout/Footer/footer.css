@@ -10,3 +10,16 @@
 		color: #fff;
 		font-size: 14px;
 	}
+
+
+	.bottom-bar .logo-container > img {
+		display:inline-block;
+		height:30px;
+		margin:0 10px;
+	}
+
+	.bottom-bar .logo-container > img +span{
+		display: inline-block;
+		position:relative;
+		top:-8px;
+	}

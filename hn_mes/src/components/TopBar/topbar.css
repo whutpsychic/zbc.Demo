@@ -10,17 +10,19 @@
 	margin-top:10px;
 }
 
-	.top-bar-ul li label{
-		display:inline-block;
-		margin-right:10px;
+	.top-bar-ul >li label {
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 14px;
 	}
 
-	.top-bar-ul li input,
-	.top-bar-ul li select{
-		box-sizing:border-box;
-		width:130px;
-		height:30px;
-		text-indent:0.5em;
+	.top-bar-ul > li > input,
+	.top-bar-ul > li > select {
+		box-sizing: border-box;
+		font-size: 14px;
+		width: 130px;
+		height: 30px;
+		text-indent: 0.5em;
 	}
 
 .top-bar-btn {

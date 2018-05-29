@@ -18,7 +18,10 @@ class Page extends Component {
 			select3Data: DATA.select3,
 			select4Data: DATA.select4,
 
-			chart1style: { height: "500px" }
+			chart1style: { height: "500px" },
+
+			timeMode: "time",
+			timeLabel:"选择日期"
 		}
 	}
 
@@ -27,6 +30,7 @@ class Page extends Component {
 		const frame_style = { height: "755px" };
 
 		const { select1Data, select2Data, select3Data, select4Data } = this.state;
+		const { timeLabel, timeMode } = this.state;
 
 		return (
 			<div className="with-left-menu">
@@ -35,8 +39,8 @@ class Page extends Component {
 						<Select label="选择范围" data={select1Data}/>
 						<Select label="选择车间" data={select2Data}/>
 						<Select label="选择能源介质" data={select3Data} />
-						<Select label="选择时间维度" data={select4Data} />
-						<Date label="选择月份" />
+						<Select label="选择时间维度" data={select4Data} onChange={this.changeTimer.bind(this)}/>
+						<Date label={timeLabel} mode={timeMode}/>
 
 						<Button text="查询"/>
 					</TopBar>
@@ -50,6 +54,26 @@ class Page extends Component {
 	componentDidMount() {
 	}
 
+	changeTimer(e) {
+
+		let v = e.target.value;
+
+		if (v === "1") this.setState({
+			timeMode: "time",
+			timeLabel:"选择日期"
+		})
+
+		else if (v === "2") this.setState({
+			timeMode: "month",
+			timeLabel: "选择月份"
+		}) 
+
+		else if (v === "3") this.setState({
+			timeMode: "year",
+			timeLabel: "选择年份"
+		}) 
+
+	}
 
 }
 
