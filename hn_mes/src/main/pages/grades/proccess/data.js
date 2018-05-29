@@ -59,10 +59,10 @@ const DATA = {
 				},
 				data: [
 					{ name: 's', x: 0, y: 0 },
-					{ name: '企业部-负责人', x: 50, y: 0 },
-					{ name: '主管领导', x: 100, y: 0 },
-					{ name: '下发通知执行', x: 150, y: 0 },
-					{ name: '结束', x: 200, y: 0 }
+					{ name: '企业部-负责人', x: 30, y: 0 },
+					{ name: '主管领导', x: 60, y: 0 },
+					{ name: '下发通知执行', x: 90, y: 0 },
+					{ name: '结束', x: 120, y: 0 }
 				],
 				links: [
 					{ source: 's', target: '企业部-负责人', label: { normal: { formatter: function () { return 'fffff' } } } },
@@ -80,6 +80,12 @@ const DATA = {
 				}
 			}]
 		}
+
+
+
+
+
+
 	}
 
 };

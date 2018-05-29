@@ -1,11 +1,7 @@
 ﻿import tool from '../../../../tool';
 const DATA = {
 
-	select1: [
-		{ text: "电石乙炔厂" },
-		{ text: "化工厂" },
-		{ text: "化工厂2" }
-	],
+
 
 	getchart1Option: function () {
 		return tool.putOn.bar1({

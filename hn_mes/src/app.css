@@ -27,3 +27,24 @@ a{
 	background-color: #a5bad0;
 }
 
+/********************antd***********************/
+
+.ant-cascader-picker{
+	width:130px;
+}
+
+.ant-calendar-picker{
+	width:130px;
+}
+
+	.ant-calendar-picker[tabindex]{
+		width:300px;
+	}
+
+	li,span{
+		font-size:14px;
+	}
+
+
+
+/********************antd***********************/

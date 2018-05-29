@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { Frame } from '../../../../components';
-import { TopBar, Select, Button } from '../../../../components';
+import { TopBar, Button, FactorySelector } from '../../../../components';
 import { Chart } from '../../../../components';
 
 import DATA from './data.js';
@@ -13,7 +13,6 @@ class Page extends Component {
 		super(...arguments);
 
 		this.state = {
-			select1Data: DATA.select1,
 
 			chart1style: { height: "350px" },
 			chart2style: { height: "400px" },
@@ -23,16 +22,15 @@ class Page extends Component {
 
 	render() {
 
-		const frame1_style = { float: "left", width: "500px", minWidth: "unset", height: "480px"};
-		const frame2_style = { marginLeft: "520px", minWidth: "unset", height: "480px"};
+		const frame1_style = { marginTop: "20px", float: "left", width: "500px", minWidth: "unset", height: "480px"};
+		const frame2_style = { marginTop: "20px", marginLeft: "530px", minWidth: "unset", height: "480px"};
 		const frame3_style = { };
 
-		const { select1Data } = this.state;
 
 		return (
 			<div className="with-left-menu">
 					<TopBar>
-						<Select label="选择工厂" data={select1Data} />
+					<FactorySelector label="选择分厂" />
 						<Button text="查询" />
 					</TopBar>
 					<Frame title="日计划完成情况" style={frame1_style}>

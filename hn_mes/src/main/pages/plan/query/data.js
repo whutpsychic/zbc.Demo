@@ -11,11 +11,7 @@ const DATA = {
 		{ text: "小号计划" },
 		{ text: "能源计划" }
 	],
-	select3: [
-		{ text: "全厂" },
-		{ text: "化工厂" },
-		{ text: "电石乙炔厂" }
-	],
+
 	select4: [
 		{ text: "全选" },
 		{ text: "烧碱车间" },

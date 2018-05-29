@@ -1,11 +1,6 @@
 ﻿const DATA = {
 
-	select1: [
-		{ text: "全厂" },
-		{ text: "化工厂" },
-		{ text: "电石乙炔厂" },
-		{ text: "动力西厂" }
-	],
+
 	select2: [
 		{ text: "全部车间" },
 		{ text: "SPVC车间" },

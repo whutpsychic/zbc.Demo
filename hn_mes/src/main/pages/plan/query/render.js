@@ -5,6 +5,8 @@ import { Frame } from '../../../../components';
 import { Grid } from '../../../../components';
 import { TopBar, Select, Button, DateRange } from '../../../../components';
 import { Chart } from '../../../../components';
+import { FactorySelector } from '../../../../components';
+
 
 import DATA from './data.js';
 import gridOption from './gridOption.js';
@@ -17,7 +19,6 @@ class Page extends Component {
 		this.state = {
 			select1Data: DATA.select1,
 			select2Data: DATA.select2,
-			select3Data: DATA.select3,
 			select4Data: DATA.select4,
 			select5Data: DATA.select5,
 
@@ -31,7 +32,7 @@ class Page extends Component {
 
 		const frame_style = { height: "auto" };
 
-		const { select1Data, select2Data, select3Data, select4Data, select5Data } = this.state;
+		const { select1Data, select2Data, select4Data, select5Data } = this.state;
 
 		return (
 			<div className="with-left-menu">
@@ -39,7 +40,7 @@ class Page extends Component {
 					<TopBar>
 						<Select label="计划类别" data={select1Data}/>
 						<Select label="计划类型" data={select2Data}/>
-						<Select label="分厂" data={select3Data}/>
+						<FactorySelector label="选择分厂"/>
 						<Select label="车间" data={select4Data}/>
 						<Select label="产品" data={select5Data}/>
 						<DateRange label="时间选择"/>
