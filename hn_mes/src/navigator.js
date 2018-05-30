@@ -2,9 +2,9 @@
 
 import message from 'antd/lib/message';
 
-message.config({
-	duration:30
-})
+//message.config({
+//	duration:30
+//})
 
 const Navigator = {
 
@@ -31,6 +31,9 @@ const Navigator = {
 
         //safari预判
         var safariverExp = /Safari/;
+
+				//OPRA预判
+				var OPRExp = /OPR/;
 
         //IE系列
         var ieverExp = /.NET/;
@@ -69,9 +72,14 @@ const Navigator = {
                 that.ver = 'Edge';
             }
 
+						else if (OPRExp.exec(theVersion)){
+							console.log('此乃Opera浏览器');
+							that.ver = 'Opera';
+						}
+
             else {
                 console.log('此乃现代浏览器,可能版本为较新版本的chrome、Safari、360浏览器');
-                that.ver = 'Chrome';
+                that.ver = 'Chrome 或 （360极速模式）';
             }
             that.support = true;
         }
@@ -100,15 +108,8 @@ const Navigator = {
             }
             else {
 							console.log('此乃未知版本的浏览器');
-							message.info(window.navigator.appCodeName);
-							message.info(window.navigator.appName);
-							message.info(window.navigator.appVersion);
-							message.info(window.navigator.platform);
-							message.info(window.navigator.product);
-							message.info(window.navigator.productSub);
-							message.info(window.navigator.userAgent);
-							message.info(window.navigator.vendor);
-							message.info(window.navigator.vendorSub);
+
+							message.warning("请不要在手机浏览器浏览本站！");
 						}
         }
     },
@@ -116,13 +117,21 @@ const Navigator = {
     //执行检测
     go: function (callback) {
 
-        //console.log(window.navigator)
-
         this.checkVersion();
 				let _this = this;
 
+				//message.info(window.navigator.appCodeName);
+				//message.info(window.navigator.appName);
+				//message.info(window.navigator.appVersion);
+				//message.info(window.navigator.platform);
+				//message.info(window.navigator.product);
+				//message.info(window.navigator.productSub);
+				//message.info(window.navigator.userAgent);
+				//message.info(window.navigator.vendor);
+				//message.info(window.navigator.vendorSub);
+
 				if (typeof callback === "function")
-					callback(_this.ver);
+					callback(_this.ver, window.navigator.platform);
 
         return this.ver;
     },

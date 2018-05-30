@@ -5,6 +5,8 @@ import { Frame } from '../../../../components';
 import { Grid } from '../../../../components';
 import { TopBar, Select, Input, DateRange, Button } from '../../../../components';
 
+import { msg } from '../../../../components/ANTD';
+
 import DATA from './data.js';
 import gridOption from './gridOption.js';
 
@@ -34,7 +36,7 @@ class Page extends Component {
 						<Select label="选择产品" data={select2Data}/>
 						<Input label="批号"/>
 						<DateRange label="时间选择"/>
-						<Button text="查询"/>
+						<Button text="查询" onClick={this.clickQueryBtn.bind(this)}/>
 						<Button text="近十日"/>
 						<Button text="近一月"/>
 					</TopBar>
@@ -45,8 +47,12 @@ class Page extends Component {
 	}
 
 	componentDidMount() {
+
 	}
 
+	clickQueryBtn() {
+		msg.info("您点击了查询按钮")
+	}
 
 }
 

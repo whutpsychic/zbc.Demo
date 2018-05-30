@@ -42,8 +42,13 @@ class App extends Component {
 
 		message.warning('本应用不支持IE 11以下的浏览器！');
 
-		Navigator.go((v) => {
-			message.info('您正在使用的是 ' + v + ' 浏览器');
+		Navigator.go((v, platform) => {
+
+			let _txt = v;
+
+			if (!v.length) _txt = platform+" 平台"
+
+			message.info('zbc检测到您正在使用的是 ' + _txt + ' 浏览器');
 		})
 
 		message.config({
