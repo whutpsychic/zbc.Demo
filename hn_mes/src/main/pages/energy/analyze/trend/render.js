@@ -19,6 +19,7 @@ class Page extends Component {
 			select4Data: DATA.select4,
 
 			chart1style: { height: "650px" },
+			chart1Data: DATA.getChartOption(),
 
 			timeMode: "time",
 			timeLabel: "选择日期"
@@ -29,7 +30,7 @@ class Page extends Component {
 
 		const frame_style = { height: "auto" };
 
-		const { select1Data, select2Data, select3Data, select4Data } = this.state;
+		const { select1Data, select2Data, select3Data, select4Data, chart1Data } = this.state;
 		const { timeLabel, timeMode } = this.state;
 
 		return (
@@ -42,13 +43,19 @@ class Page extends Component {
 						<Select label="选择时间维度" data={select4Data} onChange={this.changeTimer.bind(this)}/>
 						<Date label={timeLabel} mode={timeMode} />
 
-						<Button text="查询"/>
+						<Button text="查询" onClick={this.query.bind(this)} />
 					</TopBar>
-					<Chart option={DATA.getChartOption()} style={this.state.chart1style}/>
+					<Chart option={chart1Data} style={this.state.chart1style}/>
 				</Frame>
 
 			</div>
 		)
+	}
+
+	query() {
+		this.setState({
+			chart1Data: DATA.getChartOption()
+		})
 	}
 
 	componentDidMount() {

@@ -16,8 +16,9 @@ class Button extends Component{
 
 	clickBtn() {
 		const { onClick } = this.props;
-		if (typeof onClick==="function")
+		if (typeof onClick === "function") {
 			onClick();
+		}
 	}
 
 }

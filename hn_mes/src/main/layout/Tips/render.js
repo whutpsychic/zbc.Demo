@@ -53,7 +53,7 @@ const mapStateToProps = (state) => {
 	//console.log(state)
 	return {
 		show: state.showTips,
-		msg: "声明：根据保密协议，此demo并非实际软件，旨在展示效果，作者zbc享有最终解释权"
+		msg: "声明：根据保密协议，此demo并非实际软件，旨在展示效果，作者zbc享有最终解释权（不定时更新）"
 	};
 }
 

@@ -15,7 +15,9 @@ class Page extends Component {
 		this.state = {
 			select1Data: DATA.select1,
 			select2Data: DATA.select2,
-			select3Data: DATA.select3
+			select3Data: DATA.select3,
+
+			chartData: DATA.echartOption()
 		}
 	}
 
@@ -26,6 +28,8 @@ class Page extends Component {
 
 		const { select1Data, select2Data, select3Data } = this.state;
 
+		const { chartData } = this.state;
+
 		return (
 			<div className="with-left-menu" style={container_style}>
 				<Frame title="质量统计分析" style={frame_style}>
@@ -34,12 +38,18 @@ class Page extends Component {
 						<Select label="选择产品" data={select2Data}/>
 						<Select label="班组" data={select3Data} />
 						<DateRange label="时间选择"/>
-						<Button text="查询"/>
+						<Button text="查询" onClick={this.query.bind(this)}/>
 					</TopBar>
-					<Chart option={DATA.echartOption()} style={{ height: "600px"}}/>
+					<Chart option={chartData} style={{ height: "600px"}}/>
 				</Frame>
 			</div>
 		)
+	}
+
+	query() {
+		this.setState({
+			chartData: DATA.echartOption()
+		})
 	}
 
 	componentDidMount() {

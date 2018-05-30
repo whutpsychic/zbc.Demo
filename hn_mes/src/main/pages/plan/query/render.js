@@ -24,7 +24,11 @@ class Page extends Component {
 
 			chart1style: {height:"350px"},
 			chart2style: {height:"400px"},
-			chart3style: {height:"380px"}
+			chart3style: { height: "380px" },
+
+			chart1Data: DATA.getchart1Option(),
+			chart2Data: DATA.getchart2Option(),
+			chart3Data: DATA.getchart3Option()
 		}
 	}
 
@@ -33,6 +37,8 @@ class Page extends Component {
 		const frame_style = { height: "auto" };
 
 		const { select1Data, select2Data, select4Data, select5Data } = this.state;
+
+		const { chart1Data, chart2Data, chart3Data } = this.state;
 
 		return (
 			<div className="with-left-menu">
@@ -44,22 +50,30 @@ class Page extends Component {
 						<Select label="车间" data={select4Data}/>
 						<Select label="产品" data={select5Data}/>
 						<DateRange label="时间选择"/>
-						<Button text="查询"/>
+						<Button text="查询" onClick={this.query.bind(this)}/>
 					</TopBar>
 					<Grid option={gridOption} data={DATA.grid}/>
 				</Frame>
 				<Frame title="产量统计">
-					<Chart option={DATA.getchart1Option()} style={this.state.chart1style} />
+					<Chart option={chart1Data} style={this.state.chart1style} />
 				</Frame>
 				<Frame title="完成年计划(%)">
-					<Chart option={DATA.getchart2Option()} style={this.state.chart2style} />
+					<Chart option={chart2Data} style={this.state.chart2style} />
 				</Frame>
 				<Frame title="出入库统计">
-					<Chart option={DATA.getchart3Option()} style={this.state.chart3style} />
+					<Chart option={chart3Data} style={this.state.chart3style} />
 				</Frame>
 
 			</div>
 		)
+	}
+
+	query() {
+		this.setState({
+			chart1Data: DATA.getchart1Option(),
+			chart2Data: DATA.getchart2Option(),
+			chart3Data: DATA.getchart3Option()
+		})
 	}
 
 	componentDidMount() {
