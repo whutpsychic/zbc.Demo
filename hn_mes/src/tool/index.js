@@ -98,19 +98,48 @@ tool.minTwoNumber = (num) => {
 	return num;
 }
 
+//
+//spliter:分隔符
+//type:[date,time]
+//
 //生成当前时间字符串函数
-tool.getCurrTime = () => {
+tool.getCurrTime = (obj) => {
+
+	let _sp = '-';
+	if (obj && typeof obj.spliter === 'string')
+		_sp = obj.spliter;
 
 	let date = new Date();
+
 	let _str = '';
-	_str += date.getFullYear() + '-';
-	_str += tool.minTwoNumber(date.getMonth() + 1 > 12 ? 1 : date.getMonth() + 1) + '-';
-	_str += tool.minTwoNumber(date.getDate()) + ' ';
 
-	_str += tool.minTwoNumber(date.getHours()) + ':';
-	_str += tool.minTwoNumber(date.getMinutes());
+	if (obj && obj.type === "date") {
+		_str += date.getFullYear() + _sp;
+		_str += tool.minTwoNumber(date.getMonth() + 1 > 12 ? 1 : date.getMonth() + 1) + _sp;
+		_str += tool.minTwoNumber(date.getDate());
 
-	return _str;
+		return _str;
+	}
+
+	else if (obj && obj.type === "time") {
+		_str += tool.minTwoNumber(date.getHours()) + ':';
+		_str += tool.minTwoNumber(date.getMinutes()) + ':';
+		_str += tool.minTwoNumber(date.getSeconds());
+
+		return _str;
+	}
+
+	else {
+		_str += date.getFullYear() + _sp;
+		_str += tool.minTwoNumber(date.getMonth() + 1 > 12 ? 1 : date.getMonth() + 1) + _sp;
+		_str += tool.minTwoNumber(date.getDate()) + ' ';
+
+		_str += tool.minTwoNumber(date.getHours()) + ':';
+		_str += tool.minTwoNumber(date.getMinutes());
+
+		return _str;
+	}
+
 }
 
 //拼接2哥数组函数

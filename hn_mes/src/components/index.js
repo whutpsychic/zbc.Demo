@@ -18,7 +18,8 @@ import { Date, DateRange } from "./ANTD";
 
 
 import Grid from './Grid';
-import Chart from './Chart';
+import { Chart } from './Chart';
+import { ClockChart } from './Chart';
 
 /********绑定数据的组件***********/
 import FactorySelector from './FactorySelector';
@@ -37,5 +38,6 @@ export { LeftMenu };
 export { Frame };
 export { Grid };
 export { Chart };
+export { ClockChart };
 
 export { FactorySelector };

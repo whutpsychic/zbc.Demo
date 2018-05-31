@@ -1,0 +1,117 @@
+﻿
+.page-panel-container {
+	height: 800px;
+	background-color: #061b32;
+	padding-top: 10px;
+}
+
+.panel {
+	height: 100%;
+	margin: auto;
+	max-width: 1300px;
+}
+
+.locking-panel {
+	display: block;
+	margin:10px;
+	border: solid 3px #ccc;
+	border-image-source: url(./media/zborder.png);
+	border-image-slice: 26;
+	border-image-width: 26px;
+	border-image-outset: 0;
+}
+
+.locking-panel:first-child{
+	margin-top:0;
+}
+
+.left-block{
+	width:350px;
+	height:250px;
+}
+
+.right-block {
+	width: 920px;
+	height: 782px;
+}
+
+.panel .left-section {
+	float: left;
+	width: 380px;
+}
+
+.panel .right-section {
+	margin-left:370px;
+}
+/***********************************************/
+
+.locking-panel .clock {
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin-left: 10px;
+}
+
+.locking-panel .right-timer {
+	padding-top:50px;
+	margin-left: 210px;
+	height: 150px;
+}
+
+.locking-panel .bottom-info {
+	height:50px;
+	text-align:center;
+}
+
+.right-timer > p {
+	color: #0ff;
+	line-height: 40px;
+}
+
+	.right-timer > p:first-child {
+		font-size: 28px;
+	}
+
+	.right-timer > p:nth-child(2) {
+		font-size: 20px;
+	}
+
+	.right-timer > p:nth-child(3) {
+		font-size: 18px;
+	}
+
+.locking-panel .bottom-info > p {
+	color: #78a4f3;
+	font-size: 24px;
+}
+
+	.locking-panel .bottom-info > p > span {
+		color: #0ff;
+		font-size: 32px;
+		margin:0 10px;
+		margin-left:0;
+	}
+/***********************************************/
+p.locking-block-title {
+	display: block;
+	text-align: center;
+	height: 50px;
+	line-height: 45px;
+	color: #18376b;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	background-color: #18376b;
+	user-select: none;
+	text-shadow: 1px 1px orange, -1px 1px orange, 1px -1px orange, -1px -1px orange;
+}
+
+
+
+
+
+
+
+
+
+

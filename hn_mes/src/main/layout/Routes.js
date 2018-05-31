@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import { Panel } from '../pages';
 import { Quality } from '../pages';
 import { Plan } from '../pages';
 import { Energy } from '../pages';
@@ -16,7 +17,7 @@ class Routes extends Component {
 	render() {
 		return (
 			<Switch>
-				<Route path="/main/panel" component={NOTFOUND}></Route>
+				<Route path="/main/panel" component={Panel}></Route>
 	
 				<Route path="/main/quality" component={Quality}></Route>
 				<Route path="/main/plan" component={Plan}></Route>
