@@ -1,4 +1,9 @@
-﻿
+﻿.page-panel-container * {
+	font-family: 'Microsoft YaHei';
+	user-select: none;
+	-ms-user-select: none;
+}
+
 .page-panel-container {
 	height: 800px;
 	background-color: #061b32;
@@ -13,7 +18,7 @@
 
 .locking-panel {
 	display: block;
-	margin:10px;
+	margin: 10px;
 	border: solid 3px #ccc;
 	border-image-source: url(./media/zborder.png);
 	border-image-slice: 26;
@@ -21,18 +26,31 @@
 	border-image-outset: 0;
 }
 
-.locking-panel:first-child{
-	margin-top:0;
+	.locking-panel:first-child {
+		margin-top: 0;
+	}
+
+.left-block {
+	width: 350px;
+	height: 250px;
 }
 
-.left-block{
-	width:350px;
-	height:250px;
-}
+	.left-block > .left-block-content {
+		height: 210px;
+	}
+
+		.left-block > .left-block-content.text-content {
+			font-size: 18px;
+			line-height: 22px;
+			padding: 1em;
+			color: #75acff;
+			word-wrap: break-word;
+			text-indent: 2em;
+		}
 
 .right-block {
 	width: 920px;
-	height: 782px;
+	height: 783px;
 }
 
 .panel .left-section {
@@ -41,7 +59,7 @@
 }
 
 .panel .right-section {
-	margin-left:370px;
+	margin-left: 370px;
 }
 /***********************************************/
 
@@ -53,19 +71,19 @@
 }
 
 .locking-panel .right-timer {
-	padding-top:50px;
+	padding-top: 50px;
 	margin-left: 210px;
 	height: 150px;
 }
 
 .locking-panel .bottom-info {
-	height:50px;
-	text-align:center;
+	height: 50px;
+	text-align: center;
 }
 
 .right-timer > p {
 	color: #0ff;
-	line-height: 40px;
+	line-height: 38px;
 }
 
 	.right-timer > p:first-child {
@@ -88,8 +106,8 @@
 	.locking-panel .bottom-info > p > span {
 		color: #0ff;
 		font-size: 32px;
-		margin:0 10px;
-		margin-left:0;
+		margin: 0 10px;
+		margin-left: 0;
 	}
 /***********************************************/
 p.locking-block-title {
@@ -104,14 +122,142 @@ p.locking-block-title {
 	background-color: #18376b;
 	user-select: none;
 	text-shadow: 1px 1px orange, -1px 1px orange, 1px -1px orange, -1px -1px orange;
+	margin-bottom: 0;
 }
 
+.locking-panel .panel-title {
+	height: 40px;
+	background-color: #001635;
+	border-bottom: solid 2px #75aefb;
+}
+
+	.locking-panel .panel-title > p {
+		color: #75acff;
+		font-size: 18px;
+		line-height: 35px;
+		text-indent: 1em;
+		width: auto;
+		display: inline-block;
+	}
+
+	.locking-panel .panel-title > img {
+		float: right;
+		display: block;
+		margin-right: 20px;
+		margin-top: 2px;
+	}
 
 
+.locking-panel .grid-container {
+	margin-top:0;
+}
 
+.locking-panel .grid-container table {
+	border: none;
+}
 
+.locking-panel .z-Grid tr:hover {
+	background-color:#4390ff;
+	transition:.2s;
+}
 
+.locking-panel .z-Grid tr:hover td {
+	color: #fff;
+}
 
+.locking-panel .z-Grid th {
+	font-size: 16px;
+}
 
+.locking-panel .z-Grid td {
+	font-size: 14px;
+}
 
+.locking-panel .z-Grid th,
+.locking-panel .z-Grid td {
+	background-color: transparent;
+	border: none;
+	color: #75acff;
+}
 
+/***********************************************/
+
+.locking-panel .inner-div {
+	display: block;
+	background-color: #001a3c;
+	border: solid 1px #4390ff;
+	position: absolute;
+	cursor: pointer;
+	transition:.4s;
+}
+
+	.locking-panel .inner-div:hover {
+		background-color: #389edc;
+		border: solid 5px #389edc;
+	}
+
+	.locking-panel .inner-div * {
+		color: #fff;
+		font-size: 16px;
+	}
+
+.inner-div p.block-title {
+	text-align:center;
+	font-size:20px;
+	line-height:30px;
+}
+
+	.locking-panel .inner-div .inner-data-div {
+		padding: 10px;
+		padding-bottom: 0;
+	}
+
+		.locking-panel .inner-div .inner-data-div span {
+			font-size: 12px;
+		}
+
+		.locking-panel .inner-div .inner-data-div > p:first-child {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.locking-panel .inner-div .inner-data-div > p:nth-child(2) {
+			font-size: 12px;
+			line-height: 30px;
+		}
+
+.locking-panel .block-container {
+	text-align: center;
+}
+
+.locking-panel .inner-data-block {
+	margin: 4px;
+	display: inline-block;
+	text-align: center;
+	width: 80px;
+}
+
+	.locking-panel .inner-data-block > p.red {
+		background-color: red;
+	}
+
+	.locking-panel .inner-data-block > p.green {
+		background-color: green;
+	}
+
+	.locking-panel .inner-data-block > p.yellow {
+		background-color: yellow;
+		color: #000;
+	}
+
+	.locking-panel .inner-data-block > p:first-child {
+		display: inline-block;
+		padding: 8px 5px;
+		font-size: 14px;
+		line-height: 12px;
+	}
+
+	.locking-panel .inner-data-block > p:nth-child(2) {
+		font-size: 14px;
+		line-height: 30px;
+	}

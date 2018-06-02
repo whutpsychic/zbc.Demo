@@ -432,7 +432,7 @@ tool.putOn = {
 	//(ok)
 	pie1 : function (x) {
 		var _option = {
-			color: ['#63a5c8', '#e8c888', '#bb99cb','#9a110d','lightgreen','red'],
+			color: ['#f54d4d', '#f87544', '#ffae00', '#dcff00', '#25d053', '#01fff5', '#007cff', '#4245ff', '#c32eff','#ff62e8'],
 			legend: {
 				textStyle: { color: '#666', fontSize: 14 }, orient: 'vertical',
 				top: '8%', right: '5%'

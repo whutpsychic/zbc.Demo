@@ -9,12 +9,16 @@ const returnOptionTimer = () => {
 
 	let _hour, _minute, _second = NaN;
 
-	_hour = _date.getHours();
+	let __hour__ = _date.getHours();
+
+	_hour = __hour__ > 12 ? __hour__ - 12 : __hour__;
 	_minute = _date.getMinutes();
 	_second = _date.getSeconds();
 
+	let _h = (_hour * 5 + (_minute / 12)).toFixed(2);
+
 	return {
-		h: _hour * 5,
+		h: _h > 60 ? _h - 60 : _h,
 		m: _minute,
 		s: _second
 	}

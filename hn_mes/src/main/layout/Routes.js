@@ -27,9 +27,10 @@ class Routes extends Component {
 				<Route path="/main/device" component={NOTFOUND}></Route>
 				<Route path="/main/statistics" component={NOTFOUND}></Route>
 
+				<Redirect from="/main" to="/main/panel" />
 				<Route component={NOTFOUND}></Route>
 
-				<Redirect from="/main" to="/main/panel" />
+			
 			</Switch>
 			)
 	} 
