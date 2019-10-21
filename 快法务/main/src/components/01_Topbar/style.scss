@@ -1,0 +1,102 @@
+// ************变量群组******************
+//整个组件高度
+$height: 30px;
+
+//屏幕分辨率容器最小宽度
+$maxWidth: 1180px;
+
+//分割线高度
+$spliterHeight: 20px;
+
+// ************变量群组******************
+.top-header {
+	display: flex;
+	justify-content: center;
+	height: $height;
+	border-bottom: solid 1px #eceff0;
+	font-size: 12px;
+	line-height: $height;
+}
+
+.screen-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: $maxWidth;
+}
+
+.top-header .spliter {
+	display: block;
+	width: 1px;
+	height: $spliterHeight;
+	background-color: #eee;
+	margin-top: ($height - $spliterHeight)/2;
+}
+
+.top-header i {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: ($height - 20px)/2;
+}
+// ********************************************
+i.loc {
+}
+
+i.right-arrow {
+}
+
+.top-header {
+}
+
+.left-location-container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 90px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	border-left: solid 2px transparent;
+	border-right: solid 2px transparent;
+	&:hover {
+		overflow: unset;
+		border-left: solid 2px #007bc7;
+		border-right: solid 2px #007bc7;
+		border-bottom: solid 8px #fff;
+	}
+}
+
+.left-location-container .spliter {
+	position: absolute;
+	right: 0px;
+}
+
+.alllocations {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: 100%;
+	width: 530px;
+	height: 0;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	&:hover {
+		height: auto;
+		transition: 0.3s;
+		background-color: #389edc;
+	}
+}
+
+.alllocations span {
+	flex-basis: 15%;
+}
+
+.right-links {
+	display: flex;
+	justify-content: center;
+}
+
+.right-links span {
+	margin: 0 10px;
+}
