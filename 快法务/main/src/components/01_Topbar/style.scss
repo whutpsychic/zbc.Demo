@@ -53,12 +53,12 @@ $spliterHeight: 20px;
 }
 // ********************************************
 i.loc {
-	background-image: url("../../img/locationIcon.png");
+	background-image: url("./img/locationIcon.png");
 	background-position: 5px 4px;
 }
 
 i.right-arrow {
-	background-image: url("../../img/arrow0.png");
+	background-image: url("./img/arrow0.png");
 	background-position: 5px -2px;
 	transition: 0.3s;
 }
@@ -93,7 +93,7 @@ i.right-arrow {
 		background-position: 5px -14px;
 	}
 	&:hover i.right-arrow {
-		background-image: url("../../img/arrow1.png");
+		background-image: url("./img/arrow1.png");
 		background-position: 0px -1px;
 		transform: rotate(180deg);
 	}
