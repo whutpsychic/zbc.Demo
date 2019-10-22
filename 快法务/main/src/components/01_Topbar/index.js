@@ -52,27 +52,66 @@ class Default extends React.Component {
 			<div className="top-header">
 				<div className="screen-container">
 					<div className="left-location-container">
-						<i className="loc" />
-						<span>{currentlocation + "市"}</span>
-						<i className="right-arrow" />
-						<span className="spliter" />
+						<div className="displayer">
+							<i className="loc" />
+							<span className="currloc">{currentlocation + "市"}</span>
+							<i className="right-arrow" />
+							<span className="spliter" />
+						</div>
 						<div className="alllocations">
 							{locations.map(item => {
-								return <span key={"key" + item}>{item}</span>;
+								return (
+									<span
+										key={"key" + item}
+										onClick={() => {
+											this.reloadloc(item);
+										}}
+									>
+										{item}
+									</span>
+								);
 							})}
 						</div>
 					</div>
 					<div className="right-links">
-						<span>登录</span>
+						<span
+							onClick={() => {
+								this.defaultClick("登录按钮");
+							}}
+						>
+							登录
+						</span>
 						<span className="spliter" />
-						<span>注册</span>
+						<span
+							onClick={() => {
+								this.defaultClick("注册按钮");
+							}}
+						>
+							注册
+						</span>
 						<span className="spliter" />
-						<span>服务者登录</span>
+						<span
+							onClick={() => {
+								this.defaultClick("服务者登录");
+							}}
+						>
+							服务者登录
+						</span>
 					</div>
 				</div>
 			</div>
 		);
 	}
+
+	defaultClick = txt => {
+		alert("您点击了" + txt);
+	};
+
+	reloadloc = txt => {
+		this.setState({
+			currentlocation: txt
+		});
+	};
 }
 
 export default Default;
