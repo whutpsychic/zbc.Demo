@@ -9,7 +9,7 @@ const _htmlPlugins = [new HtmlWebpackPlugin({
 		template: _template,
 		chunks: ["main"], //关联指向关键信息
 		templateParameters: {
-      title: "仿快法务首页"
+      title: "仿快法务——首页"
     }
 	}),new HtmlWebpackPlugin({
 		filename: "_defaultPage/index.html",
