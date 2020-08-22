@@ -1,0 +1,90 @@
+.table-container {
+	width: 100%;
+}
+
+/*边界样式*/
+.table-container .ant-table-content table {
+	border-collapse: collapse;
+}
+
+.table-container .ant-table-content {
+	border: solid 1px #dcdcdc;
+}
+
+/*表头文字样式*/
+.table-container .ant-table-thead > tr.com-table-header-row > th {
+	font-weight: bold;
+	text-align: center;
+	padding: 10px 20px;
+	border-bottom: solid 1px #ddd;
+	border-left: solid 1px #fff;
+	background-color: #eff3f9;
+	color: #444;
+}
+
+.table-container .ant-table-thead > tr.com-table-header-row > th:first-child {
+	border-left: none;
+}
+
+/*表内文字样式*/
+.table-container .ant-table-tbody > tr.com-table-row > td {
+	text-align: center;
+	padding: 6px 12px;
+	border-left: solid 1px #ddd;
+	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
+	/*修补*/
+	height: 35px;
+}
+
+.table-container .ant-table-tbody > tr.com-table-row > td:first-child {
+	border-left: none;
+}
+
+/*表内行样式*/
+/*奇数行*/
+.table-container .ant-table-tbody > tr.com-table-row:nth-child(2n + 1) {
+	background-color: #f8f8f8;
+}
+
+/*偶数行*/
+.table-container .ant-table-tbody > tr.com-table-row:nth-child(2n + 2) {
+	background-color: #fff;
+}
+
+/*悬停样式*/
+.table-container .ant-table-tbody > tr.com-table-row:hover > td {
+	background-color: #fffde4;
+}
+
+/*===================分页样式========================*/
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+	border: none;
+}
+
+li.ant-pagination-prev[aria-disabled="false"] .ant-pagination-item-link,
+li.ant-pagination-next[aria-disabled="false"] .ant-pagination-item-link {
+	color: #365ca4;
+}
+
+li.ant-pagination-prev.ant-pagination-disabled[aria-disabled="true"]
+	.ant-pagination-item-link,
+li.ant-pagination-next.ant-pagination-disabled[aria-disabled="true"]
+	.ant-pagination-item-link {
+	color: #ccc;
+}
+
+/*----------*/
+.table-container .ant-pagination-item {
+	border: none;
+}
+
+.ant-pagination-item.ant-pagination-item-active {
+	background-color: #389edc;
+}
+
+.ant-pagination-item.ant-pagination-item-active a {
+	color: #fff;
+}

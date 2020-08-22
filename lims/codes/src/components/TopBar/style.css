@@ -1,0 +1,42 @@
+.conditions-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.conditions-container .left-conditions {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -8px;
+}
+
+.conditions-container .left-conditions li {
+	margin-left: 8px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	width: 150px;
+}
+
+.conditions-container .left-conditions li.date-range-li {
+	width: 300px;
+}
+
+/*.conditions-container .left-conditions li label {
+	margin-right: 8px;
+	min-width: 60px;
+	text-align: right;
+}*/
+
+.conditions-container .right-btns {
+	display: flex;
+	margin-bottom: 8px;
+}
+
+.conditions-container .right-btns li {
+	margin-left: 8px;
+}
+
+.conditions-container .right-btns li:first-child {
+	margin-left: 0;
+}

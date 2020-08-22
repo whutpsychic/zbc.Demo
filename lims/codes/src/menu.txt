@@ -1,0 +1,78 @@
+首页 home
+合同管理 contract
+  合同受理 acceptance
+  合同评审 review
+  合同查询 query
+  测试三级菜单 zzzzzzz
+    三级菜单1 bbbbbb1
+    三级菜单2 cccccc2
+    三级菜单3 cccccc3
+    三级菜单4 cccccc4
+    三级菜单5 cccccc5
+    三级菜单6 cccccc6
+    三级菜单7 cccccc7
+    三级菜单8 cccccc8
+    三级菜单9 cccccc9
+样品管理 sample
+  样品登记 register
+  样品录入 input
+  样品加工 machin
+  还样管理 management
+  留样管理 retention
+  样品跟踪 track
+任务管理 mission
+  任务分配 distribution
+  人员任务分配 personDistribution
+  任务查询 query
+检验过程管理 testProccess
+  检验任务确认 testMission
+  样品称重 weigh
+  过程检验 proccessingTest
+  生产快样录入 sampleInput
+  检验任务提交 missionSubmit
+  一级审核 examineOne
+  二级审核 examineTwo
+  三级审核 examineThree
+报告管理 report
+  报告编制 organize
+  报告审核 examine
+  报告发布 release
+  报告查询 query
+标准管理 standard
+  检验项目 testItem
+  检验标准 testStandard
+  模板管理 template
+质量活动管理 quality
+  质控任务管理 mission
+  质量抽检 checkout
+  质检对比 compaire
+  质控图管理 picture
+  内部评审管理 innerExamine
+  管理评审 examine
+  不符合项管理 inconformity
+  纠正措施管理 correct
+  质量异议处理 objection
+检验资源管理 resource
+  试剂耗材入库管理 inWarehouse
+  试剂耗材库存管理 storage
+  出库记录 outWarehouse
+  设备台账 deviceAccount
+  校准及检定记录 testRecord
+  维修管理 repaire
+  操作记录 operation
+文件管理 file
+  文件上传 upload
+  文件下载 download
+  文件目录管理 catalog
+标准室管理 standardRoom
+  标准物质台账 materialAccount
+  任务单创建 missionCreate
+  标准溶液配置 liquid
+  期间核查管理 duringExamine
+基础数据管理 baseData
+  人员管理 persons
+  客户管理 customer
+  环境因素记录 environment
+  检测收费管理 testCharge
+  字典表管理 dictionary
+统计分析 statistics

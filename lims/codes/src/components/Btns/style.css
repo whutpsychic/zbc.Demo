@@ -1,0 +1,131 @@
+.com-btn {
+	cursor: pointer;
+	user-select: none;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	padding: 6px 14px;
+	height: 35px;
+}
+
+.com-btn img {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+}
+/*=====================================*/
+.com-btn.disabled {
+	cursor: not-allowed;
+	background-color: #d0d0d0;
+}
+
+.com-btn.num1 {
+	background-color: #66a7fe;
+}
+
+.com-btn.num1:hover {
+	background-color: #579df8;
+}
+
+.com-btn.num1:active {
+	background-color: #197afa;
+}
+
+.com-btn.num2 {
+	background-color: #39df70;
+}
+
+.com-btn.num2:hover {
+	background-color: #25dc61;
+}
+
+.com-btn.num2:active {
+	background-color: #01ba3d;
+}
+
+.com-btn.num3 {
+	background-color: #fc7c6a;
+}
+
+.com-btn.num3:hover {
+	background-color: #fa6c57;
+}
+
+.com-btn.num3:active {
+	background-color: #f25138;
+}
+
+.com-btn.num4 {
+	background-color: #d45fe6;
+}
+
+.com-btn.num4:hover {
+	background-color: #d150e4;
+}
+
+.com-btn.num4:active {
+	background-color: #bf28d6;
+}
+
+.com-btn.num5 {
+	background-color: #ffbf32;
+}
+
+.com-btn.num5:hover {
+	background-color: #fab620;
+}
+
+.com-btn.num5:active {
+	background-color: #d18f00;
+}
+
+.com-btn.num6 {
+	background-color: #a08bfd;
+}
+
+.com-btn.num6:hover {
+	background-color: #917afb;
+}
+
+.com-btn.num6:active {
+	background-color: #6847f1;
+}
+
+.com-btn.num7 {
+	background-color: #4cccb8;
+}
+
+.com-btn.num7:hover {
+	background-color: #37cab3;
+}
+
+.com-btn.num7:active {
+	background-color: #00a58a;
+}
+
+.com-btn.num8 {
+	background-color: #bad42e;
+}
+
+.com-btn.num8:hover {
+	background-color: #b4d215;
+}
+
+.com-btn.num8:active {
+	background-color: #8faa00;
+}
+
+.com-btn.num9 {
+	background-color: #fda868;
+}
+
+.com-btn.num9:hover {
+	background-color: #fb9e56;
+}
+
+.com-btn.num9:active {
+	background-color: #f27f27;
+}

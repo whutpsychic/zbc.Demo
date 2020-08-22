@@ -1,0 +1,176 @@
+/*总体类样式*/
+body {
+	overflow: hidden;
+}
+.App {
+}
+/***********************top-header**************************/
+header.top-header {
+	background-color: #345ea5;
+	height: 60px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	user-select: none;
+}
+
+header.top-header img {
+	display: block;
+}
+
+header.top-header .logo-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header.top-header .logo-container .menu-op-btn {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-around;
+}
+
+header.top-header .logo-container .menu-op-btn > img {
+	/*width: 20px;*/
+	height: 20px;
+}
+
+header.top-header .logo-container .menu-op-btn > span {
+	font-size: 14px;
+	color: #00a4fe;
+	display: block;
+	padding: 0 8px;
+}
+
+header.top-header .logo-container > img.logo {
+	width: 150px;
+	margin: 0 10px;
+}
+
+.right-addons {
+	display: block;
+	color: #fff;
+}
+
+.right-addons ul {
+	display: flex;
+	height: 60px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.right-addons ul li {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+.right-addons ul li .top-select span {
+	margin: 0 4px;
+}
+
+.right-addons ul li .top-icon-item {
+	position: relative;
+}
+
+.right-addons ul li .top-icon-item img {
+	width: 20px;
+}
+
+.right-addons ul li .top-icon-item span {
+	font-size: 14px;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+
+	border-radius: 50%;
+}
+
+.right-addons ul li .top-icon-item span.alert-count {
+	background-color: red;
+	color: #eef;
+}
+
+.right-addons ul li .top-icon-item span.msg-count {
+	background-color: orange;
+	color: #eef;
+}
+
+.right-addons ul li.with-img {
+	display: flex;
+	align-items: center;
+}
+
+.right-addons ul li.with-img img {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 4px;
+}
+
+/**********************************************************/
+.ui {
+	height: calc(100vh - 60px);
+	display: flex;
+	justify-content: space-between;
+	background-color: #f0f2f7;
+}
+/***********************left-menu**************************/
+.left-menu-container {
+	width: 230px;
+	height: calc(100vh - 60px);
+	overflow: auto;
+	transition: 0.2s;
+}
+
+.left-menu-container.hide {
+	width: 0;
+}
+
+.left-menu-container .three-m .ant-menu-submenu-title {
+	padding-left: 0;
+}
+
+/*========================main-content=============================*/
+.main-content {
+	display: block;
+	width: calc(100% - 230px);
+	height: calc(100vh - 60px);
+	transition: 0.3s;
+	padding: 18px;
+	overflow: auto;
+}
+
+.main-content.no-left {
+	width: calc(100%);
+}
+
+.page-container {
+	background-color: #fff;
+	display: block;
+	width: 100%;
+	padding: 8px 18px;
+	border-radius: 4px;
+}
+/*-----------------------------*/
+
+.ant-menu-submenu.ant-menu-submenu-popup.ant-menu.ant-menu-dark.ant-menu-submenu-placement-rightTop {
+	min-width: 240px;
+	height: 100vh;
+}
+
+.ant-menu-submenu.ant-menu-submenu-popup.ant-menu.ant-menu-dark.ant-menu-submenu-placement-rightTop.ant-menu-submenu-hidden {
+	display: none;
+}
+
+.ant-menu-submenu.ant-menu-submenu-popup.ant-menu.ant-menu-dark.ant-menu-submenu-placement-rightTop
+	.ant-menu.ant-menu-sub.ant-menu-vertical {
+	width: 100%;
+	height: 100vh;
+	max-height: unset;
+}

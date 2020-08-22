@@ -1,0 +1,112 @@
+.com-btn {
+	display: block;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.com-btn.twobytes {
+	width: 69px;
+	height: 32px;
+}
+
+.com-btn.fourbytes {
+	width: 88px;
+	height: 32px;
+}
+/*==================================================*/
+
+.com-btn.acceptance {
+	background-image: url("./acceptance.png");
+}
+
+.com-btn.acceptance:active {
+	background-image: url("./acceptance_active.png");
+}
+
+.com-btn.add {
+	background-image: url("./add.png");
+}
+
+.com-btn.add:active {
+	background-image: url("./add_active.png");
+}
+
+.com-btn.back {
+	background-image: url("./back.png");
+}
+
+.com-btn.back:active {
+	background-image: url("./back_active.png");
+}
+
+.com-btn.cancel {
+	background-image: url("./cancel.png");
+}
+
+.com-btn.cancel:active {
+	background-image: url("./cancel_active.png");
+}
+
+.com-btn.confirm-receive {
+	background-image: url("./confirmReceive.png");
+}
+
+.com-btn.confirm-receive:active {
+	background-image: url("./confirmReceive_active.png");
+}
+
+.com-btn.delete {
+	background-image: url("./delete.png");
+}
+
+.com-btn.delete:active {
+	background-image: url("./delete_active.png");
+}
+
+.com-btn.edit {
+	background-image: url("./edit.png");
+}
+
+.com-btn.edit:active {
+	background-image: url("./edit_active.png");
+}
+
+.com-btn.jy-confirm {
+	background-image: url("./jyConfirm.png");
+}
+
+.com-btn.jy-confirm:active {
+	background-image: url("./jyConfirm_active.png");
+}
+
+.com-btn.myjy {
+	background-image: url("./myjy.png");
+}
+
+.com-btn.myjy:active {
+	background-image: url("./myjy_active.png");
+}
+
+.com-btn.print {
+	background-image: url("./print.png");
+}
+
+.com-btn.print:active {
+	background-image: url("./print_active.png");
+}
+
+.com-btn.query {
+	background-image: url("./query.png");
+}
+
+.com-btn.query:active {
+	background-image: url("./query_active.png");
+}
+
+.com-btn.scan-jy {
+	background-image: url("./scanjy.png");
+}
+
+.com-btn.scan-jy:active {
+	background-image: url("./scanjy_active.png");
+}
