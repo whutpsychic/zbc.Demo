@@ -45,6 +45,8 @@ ${obj.children
 	})
 	.join("\n")}
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
@@ -54,15 +56,15 @@ class Default extends React.Component {
 					if (item.hasOwnProperty("children")) {
 						return item.children
 							.map(_item => {
-								return `<Route path={'/${obj.address}/${item.address}/${_item.address}'} component={${obj.address}${item.address}${_item.address}} />`;
+								return `<Route path={rootUrl+'/${obj.address}/${item.address}/${_item.address}'} component={${obj.address}${item.address}${_item.address}} />`;
 							})
 							.join("\n");
 					} else {
-						return `<Route path={'/${obj.address}/${item.address}'} component={${obj.address}${item.address}} />`;
+						return `<Route path={rootUrl+'/${obj.address}/${item.address}'} component={${obj.address}${item.address}} />`;
 					}
 				})
 				.join("\n")}
-	<Redirect from={"/${obj.address}"} to={"/${obj.address}/${
+	<Redirect from={rootUrl+"/${obj.address}"} to={"/${obj.address}/${
 		obj.children[0].address
 	}"} />
 			</Switch>

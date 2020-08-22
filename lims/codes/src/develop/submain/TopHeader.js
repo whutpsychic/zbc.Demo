@@ -21,6 +21,8 @@ import top_icon_alert from "../../imgs/top-icon-alert.png";
 import top_icon_msg from "../../imgs/top-icon-msg.png";
 import top_icon_user_img from "../../imgs/top-icon-user-img.png";
 
+import { rootUrl } from "../../config.js";
+
 //渲染警报数据
 const renderAlertDropDownList = (data, fn, loadingData) => {
 	if (loadingData)
@@ -111,7 +113,7 @@ class Default extends React.Component {
 			<Menu.Item>
 				<span
 					onClick={() => {
-						window.location.pathname = "/";
+						window.location.pathname = rootUrl;
 					}}
 				>
 					退出登录

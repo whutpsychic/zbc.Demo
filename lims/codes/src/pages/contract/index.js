@@ -14,23 +14,25 @@ import contractzzzzzzzcccccc7 from './contract-zzzzzzz-cccccc7'
 import contractzzzzzzzcccccc8 from './contract-zzzzzzz-cccccc8'
 import contractzzzzzzzcccccc9 from './contract-zzzzzzz-cccccc9'
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={'/contract/acceptance'} component={contractacceptance} />
-<Route path={'/contract/review'} component={contractreview} />
-<Route path={'/contract/query'} component={contractquery} />
-<Route path={'/contract/zzzzzzz/bbbbbb1'} component={contractzzzzzzzbbbbbb1} />
-<Route path={'/contract/zzzzzzz/cccccc2'} component={contractzzzzzzzcccccc2} />
-<Route path={'/contract/zzzzzzz/cccccc3'} component={contractzzzzzzzcccccc3} />
-<Route path={'/contract/zzzzzzz/cccccc4'} component={contractzzzzzzzcccccc4} />
-<Route path={'/contract/zzzzzzz/cccccc5'} component={contractzzzzzzzcccccc5} />
-<Route path={'/contract/zzzzzzz/cccccc6'} component={contractzzzzzzzcccccc6} />
-<Route path={'/contract/zzzzzzz/cccccc7'} component={contractzzzzzzzcccccc7} />
-<Route path={'/contract/zzzzzzz/cccccc8'} component={contractzzzzzzzcccccc8} />
-<Route path={'/contract/zzzzzzz/cccccc9'} component={contractzzzzzzzcccccc9} />
-	<Redirect from={"/contract"} to={"/contract/acceptance"} />
+			<Route path={rootUrl+'/contract/acceptance'} component={contractacceptance} />
+<Route path={rootUrl+'/contract/review'} component={contractreview} />
+<Route path={rootUrl+'/contract/query'} component={contractquery} />
+<Route path={rootUrl+'/contract/zzzzzzz/bbbbbb1'} component={contractzzzzzzzbbbbbb1} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc2'} component={contractzzzzzzzcccccc2} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc3'} component={contractzzzzzzzcccccc3} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc4'} component={contractzzzzzzzcccccc4} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc5'} component={contractzzzzzzzcccccc5} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc6'} component={contractzzzzzzzcccccc6} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc7'} component={contractzzzzzzzcccccc7} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc8'} component={contractzzzzzzzcccccc8} />
+<Route path={rootUrl+'/contract/zzzzzzz/cccccc9'} component={contractzzzzzzzcccccc9} />
+	<Redirect from={rootUrl+"/contract"} to={"/contract/acceptance"} />
 			</Switch>
 		);
 	}

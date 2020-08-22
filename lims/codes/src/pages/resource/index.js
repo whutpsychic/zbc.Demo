@@ -9,18 +9,20 @@ import resourcetestRecord from './resource-testRecord'
 import resourcerepaire from './resource-repaire'
 import resourceoperation from './resource-operation'
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={'/resource/inWarehouse'} component={resourceinWarehouse} />
-<Route path={'/resource/storage'} component={resourcestorage} />
-<Route path={'/resource/outWarehouse'} component={resourceoutWarehouse} />
-<Route path={'/resource/deviceAccount'} component={resourcedeviceAccount} />
-<Route path={'/resource/testRecord'} component={resourcetestRecord} />
-<Route path={'/resource/repaire'} component={resourcerepaire} />
-<Route path={'/resource/operation'} component={resourceoperation} />
-	<Redirect from={"/resource"} to={"/resource/inWarehouse"} />
+			<Route path={rootUrl+'/resource/inWarehouse'} component={resourceinWarehouse} />
+<Route path={rootUrl+'/resource/storage'} component={resourcestorage} />
+<Route path={rootUrl+'/resource/outWarehouse'} component={resourceoutWarehouse} />
+<Route path={rootUrl+'/resource/deviceAccount'} component={resourcedeviceAccount} />
+<Route path={rootUrl+'/resource/testRecord'} component={resourcetestRecord} />
+<Route path={rootUrl+'/resource/repaire'} component={resourcerepaire} />
+<Route path={rootUrl+'/resource/operation'} component={resourceoperation} />
+	<Redirect from={rootUrl+"/resource"} to={"/resource/inWarehouse"} />
 			</Switch>
 		);
 	}

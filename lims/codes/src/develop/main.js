@@ -21,6 +21,8 @@ import standardRoom from "../pages/standardRoom/index.js";
 import statistics from "../pages/statistics/index.js";
 import testProccess from "../pages/testProccess/index.js";
 
+import { rootUrl } from "../config.js";
+
 class Default extends React.Component {
 	componentDidMount() {
 		//
@@ -38,19 +40,25 @@ class Default extends React.Component {
 						className={shrinkLeftMenu ? "main-content no-left" : "main-content"}
 					>
 						<Switch>
-							<Route path="/baseData" component={baseData} />
-							<Route path="/contract" component={contract} />
-							<Route path="/file" component={file} />
-							<Route path="/home" component={home} />
-							<Route path="/mission" component={mission} />
-							<Route path="/quality" component={quality} />
-							<Route path="/report" component={report} />
-							<Route path="/resource" component={resource} />
-							<Route path="/sample" component={sample} />
-							<Route path="/standard" component={standard} />
-							<Route path="/standardRoom" component={standardRoom} />
-							<Route path="/statistics" component={statistics} />
-							<Route path="/testProccess" component={testProccess} />
+							<Route path={rootUrl + "/baseData"} component={baseData} />
+							<Route path={rootUrl + "/contract"} component={contract} />
+							<Route path={rootUrl + "/file"} component={file} />
+							<Route path={rootUrl + "/home"} component={home} />
+							<Route path={rootUrl + "/mission"} component={mission} />
+							<Route path={rootUrl + "/quality"} component={quality} />
+							<Route path={rootUrl + "/report"} component={report} />
+							<Route path={rootUrl + "/resource"} component={resource} />
+							<Route path={rootUrl + "/sample"} component={sample} />
+							<Route path={rootUrl + "/standard"} component={standard} />
+							<Route
+								path={rootUrl + "/standardRoom"}
+								component={standardRoom}
+							/>
+							<Route path={rootUrl + "/statistics"} component={statistics} />
+							<Route
+								path={rootUrl + "/testProccess"}
+								component={testProccess}
+							/>
 						</Switch>
 					</div>
 				</div>

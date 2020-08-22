@@ -5,31 +5,9 @@ import tool from "../../tool/index";
 import { connect } from "react-redux";
 import { shrinkLeftMenu } from "../../redux/actions";
 
-// import mimg_stretch from "../../imgs/left-menu-stretch.png";
-// import mimg_shrink from "../../imgs/left-menu-shrink.png";
-
-// import micon_home from "../../imgs/micon-home.png";
-// import micon_contract from "../../imgs/micon-contract.png";
-// import micon_mission from "../../imgs/micon-mission.png";
-// import micon_quality from "../../imgs/micon-quality.png";
-// import micon_report from "../../imgs/micon-report.png";
-// import micon_sample from "../../imgs/micon-sample.png";
-// import micon_standard from "../../imgs/micon-standard.png";
-// import micon_verify from "../../imgs/micon-verify.png";
+import { rootUrl } from "../../config.js";
 
 const { SubMenu } = Menu;
-
-// //图标小桌面
-// const iconTable = {
-// 	home: micon_home,
-// 	contract: micon_contract,
-// 	mission: micon_mission,
-// 	quality: micon_quality,
-// 	report: micon_report,
-// 	sample: micon_sample,
-// 	standard: micon_standard,
-// 	verify: micon_verify
-// };
 
 class Default extends React.Component {
 	state = {
@@ -127,6 +105,9 @@ class Default extends React.Component {
 	//修复Menu当前项显示
 	fixUpMenuContent = str => {
 		let pathstr = str ? str : window.location.pathname;
+		// ====================
+		pathstr = pathstr.replace(`${rootUrl}`, "");
+		// ====================
 		let tempArr = pathstr.split("/");
 		let openKeys = tempArr[1];
 		let selectedKeys = tempArr[2];
@@ -154,7 +135,7 @@ class Default extends React.Component {
 		const { key, selectedKeys } = target;
 		if (!key || key === "null") return;
 		//跳转到目标页
-		tool.jump(`/${key}`);
+		tool.jump(`${rootUrl}/${key}`);
 		//设置菜单显示目标
 		this.setState({
 			selectedKeys: selectedKeys
@@ -165,7 +146,7 @@ class Default extends React.Component {
 		const { key, selectedKeys } = target;
 		if (!key || key === "null") return;
 		//跳转到目标页
-		tool.jump(`/${key}`);
+		tool.jump(`${rootUrl}/${key}`);
 		//设置菜单显示目标
 		this.setState({
 			selectedKeys: selectedKeys

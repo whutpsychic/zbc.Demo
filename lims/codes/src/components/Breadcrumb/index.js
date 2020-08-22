@@ -3,11 +3,13 @@ import React from "react";
 import "./style.css";
 import { Breadcrumb } from "antd";
 import menuData from "../../develop/menu.js";
-
+import { rootUrl } from "../../config.js";
 import location from "./position.png";
 
 const getBreadcrumb = () => {
-	const { pathname } = window.location;
+	let { pathname } = window.location;
+
+	pathname = pathname.replace(`${rootUrl}`, "");
 
 	let arr = pathname.split("/").filter(item => {
 		return item;

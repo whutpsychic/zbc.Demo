@@ -10,19 +10,21 @@ import testProccessexamineOne from './testProccess-examineOne'
 import testProccessexamineTwo from './testProccess-examineTwo'
 import testProccessexamineThree from './testProccess-examineThree'
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={'/testProccess/testMission'} component={testProccesstestMission} />
-<Route path={'/testProccess/weigh'} component={testProccessweigh} />
-<Route path={'/testProccess/proccessingTest'} component={testProccessproccessingTest} />
-<Route path={'/testProccess/sampleInput'} component={testProccesssampleInput} />
-<Route path={'/testProccess/missionSubmit'} component={testProccessmissionSubmit} />
-<Route path={'/testProccess/examineOne'} component={testProccessexamineOne} />
-<Route path={'/testProccess/examineTwo'} component={testProccessexamineTwo} />
-<Route path={'/testProccess/examineThree'} component={testProccessexamineThree} />
-	<Redirect from={"/testProccess"} to={"/testProccess/testMission"} />
+			<Route path={rootUrl+'/testProccess/testMission'} component={testProccesstestMission} />
+<Route path={rootUrl+'/testProccess/weigh'} component={testProccessweigh} />
+<Route path={rootUrl+'/testProccess/proccessingTest'} component={testProccessproccessingTest} />
+<Route path={rootUrl+'/testProccess/sampleInput'} component={testProccesssampleInput} />
+<Route path={rootUrl+'/testProccess/missionSubmit'} component={testProccessmissionSubmit} />
+<Route path={rootUrl+'/testProccess/examineOne'} component={testProccessexamineOne} />
+<Route path={rootUrl+'/testProccess/examineTwo'} component={testProccessexamineTwo} />
+<Route path={rootUrl+'/testProccess/examineThree'} component={testProccessexamineThree} />
+	<Redirect from={rootUrl+"/testProccess"} to={"/testProccess/testMission"} />
 			</Switch>
 		);
 	}

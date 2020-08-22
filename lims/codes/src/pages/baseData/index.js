@@ -7,16 +7,18 @@ import baseDataenvironment from './baseData-environment'
 import baseDatatestCharge from './baseData-testCharge'
 import baseDatadictionary from './baseData-dictionary'
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={'/baseData/persons'} component={baseDatapersons} />
-<Route path={'/baseData/customer'} component={baseDatacustomer} />
-<Route path={'/baseData/environment'} component={baseDataenvironment} />
-<Route path={'/baseData/testCharge'} component={baseDatatestCharge} />
-<Route path={'/baseData/dictionary'} component={baseDatadictionary} />
-	<Redirect from={"/baseData"} to={"/baseData/persons"} />
+			<Route path={rootUrl+'/baseData/persons'} component={baseDatapersons} />
+<Route path={rootUrl+'/baseData/customer'} component={baseDatacustomer} />
+<Route path={rootUrl+'/baseData/environment'} component={baseDataenvironment} />
+<Route path={rootUrl+'/baseData/testCharge'} component={baseDatatestCharge} />
+<Route path={rootUrl+'/baseData/dictionary'} component={baseDatadictionary} />
+	<Redirect from={rootUrl+"/baseData"} to={"/baseData/persons"} />
 			</Switch>
 		);
 	}

@@ -5,14 +5,16 @@ import fileupload from './file-upload'
 import filedownload from './file-download'
 import filecatalog from './file-catalog'
 
+import { rootUrl } from "../../config.js";
+
 class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={'/file/upload'} component={fileupload} />
-<Route path={'/file/download'} component={filedownload} />
-<Route path={'/file/catalog'} component={filecatalog} />
-	<Redirect from={"/file"} to={"/file/upload"} />
+			<Route path={rootUrl+'/file/upload'} component={fileupload} />
+<Route path={rootUrl+'/file/download'} component={filedownload} />
+<Route path={rootUrl+'/file/catalog'} component={filecatalog} />
+	<Redirect from={rootUrl+"/file"} to={"/file/upload"} />
 			</Switch>
 		);
 	}

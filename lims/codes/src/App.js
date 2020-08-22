@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "./style/dark1";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
 import Login from "./develop/login";
@@ -13,6 +13,8 @@ import { ConfigProvider } from "antd";
 import zh_CN from "antd/es/locale/zh_CN.js";
 import en_US from "antd/es/locale/en_US.js";
 import locale from "./locale.js";
+
+import { rootUrl } from "./config.js";
 
 //语言切换变换器
 const langDistinguish = lang => {
@@ -48,7 +50,7 @@ class App extends React.Component {
         <div className="App">
           <Router>
             <Switch>
-              <Route path={"/"} exact component={Login} />
+              <Route path={rootUrl + "/"} exact component={Login} />
               <Route component={Main} />
             </Switch>
           </Router>
