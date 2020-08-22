@@ -12,6 +12,7 @@ import psw from "../imgs/psw.png";
 
 class Default extends React.Component {
 	componentDidMount() {
+		//
 		tool.jumpFn = this.props.history.push;
 	}
 
