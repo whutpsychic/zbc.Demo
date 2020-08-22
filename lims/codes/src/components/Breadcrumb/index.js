@@ -4,7 +4,7 @@ import "./style.css";
 import { Breadcrumb } from "antd";
 import menuData from "../../develop/menu.js";
 import { rootUrl } from "../../config.js";
-import location from "./position.png";
+import location from "../../imgs/position.png";
 
 const getBreadcrumb = () => {
 	let { pathname } = window.location;
