@@ -81,9 +81,10 @@ const createFile = ({ url, title }) => {
 	// 路径类型
 	let fileUrl = `${url[0]}`;
 	let urlAddons = "";
-	for (let i = 0; i < url.length; i++) {
-		i ? (urlAddons += `-${url[i]}`) : (urlAddons += `/${url[i]}`);
-	}
+	if (url.length > 1)
+		for (let i = 0; i < url.length; i++) {
+			i ? (urlAddons += `-${url[i]}`) : (urlAddons += `/${url[i]}`);
+		}
 	fileUrl += urlAddons;
 	// console.log(`\n`);
 	// console.log(`===================================65`);

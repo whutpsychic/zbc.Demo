@@ -10,6 +10,8 @@ import logoSmall from "../imgs/logo-small.png";
 import user from "../imgs/user.png";
 import psw from "../imgs/psw.png";
 
+import { rootUrl } from "../config.js";
+
 class Default extends React.Component {
 	componentDidMount() {
 		//
@@ -48,7 +50,7 @@ class Default extends React.Component {
 	}
 
 	onClickLogin = () => {
-		tool.jump("/home");
+		tool.jump(`${rootUrl}/home`);
 	};
 }
 
