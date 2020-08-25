@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Input, Select, DateRange } from "../Conditions";
+import { Input, Select, DatePicker, DateRange } from "../Conditions";
 
 class TopBarLeft extends React.Component {
 	childs = {};
@@ -53,6 +53,7 @@ const itemWidth = 140;
 const itemHeight = 32;
 const dateRangeWidth = 356;
 // ===================================================================
+//输入框
 class TopBarInput extends React.Component {
 	state = {};
 
@@ -81,6 +82,7 @@ class TopBarInput extends React.Component {
 	};
 }
 
+//下拉框
 class TopBarSelect extends React.Component {
 	componentDidMount() {
 		const { onRef } = this.props;
@@ -105,6 +107,34 @@ class TopBarSelect extends React.Component {
 	};
 }
 
+//日期——日期选择框
+class TopBarDatePicker extends React.Component {
+	componentDidMount() {
+		const { onRef } = this.props;
+		if (typeof onRef === "function") onRef(this);
+	}
+	render() {
+		const { label } = this.props;
+		return (
+			<li className="date-picker-li">
+				{/*label ? <label>{label}</label> : null*/}
+				<DatePicker
+					ref="date-picker"
+					placeholder={label}
+					style={{
+						width: `${itemWidth}px`,
+						height: `${itemHeight}px`
+					}}
+				/>
+			</li>
+		);
+	}
+	getValue = () => {
+		return this.refs["date-picker"].getValue();
+	};
+}
+
+//日期——日期区间选择框
 class TopBarDateRange extends React.Component {
 	componentDidMount() {
 		const { onRef } = this.props;
@@ -132,6 +162,7 @@ class TopBarDateRange extends React.Component {
 
 Default.Input = TopBarInput;
 Default.Select = TopBarSelect;
+Default.DatePicker = TopBarDatePicker;
 Default.DateRange = TopBarDateRange;
 
 export default Default;

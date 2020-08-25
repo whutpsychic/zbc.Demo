@@ -1,6 +1,5 @@
 import React from "react";
 import { Input } from "antd";
-import "./input.css";
 
 class Default extends React.Component {
 	state = { value: "" };

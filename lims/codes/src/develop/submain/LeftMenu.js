@@ -155,6 +155,7 @@ class Default extends React.Component {
 
 	render() {
 		const { shrinkLeftMenu } = this.props;
+
 		return (
 			<div className={shrinkLeftMenu ? "left-section no-left" : "left-section"}>
 				<div
@@ -191,4 +192,7 @@ const mapDispatchToProps = (dispatch, props) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Default);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Default);

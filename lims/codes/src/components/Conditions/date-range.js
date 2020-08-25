@@ -1,6 +1,5 @@
 import React from "react";
 import { DatePicker } from "antd";
-import "./date-range.css";
 
 const { RangePicker } = DatePicker;
 

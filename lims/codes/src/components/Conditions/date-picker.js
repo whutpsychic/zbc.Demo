@@ -1,32 +1,22 @@
 import React from "react";
-import { Select } from "antd";
-
-const { Option } = Select;
+import { DatePicker } from "antd";
 
 class Default extends React.Component {
 	state = { value: null };
 	render() {
-		const { data = [] } = this.props;
 		const { value } = this.state;
 		return (
-			<Select
+			<DatePicker
 				{...this.props}
 				value={value}
 				onChange={value => {
-					this.setState({ value });
+					this.setState({
+						value: value
+					});
 				}}
-			>
-				{data.map((item, i) => {
-					return (
-						<Option key={`op${i}`} value={item.value}>
-							{item.label}
-						</Option>
-					);
-				})}
-			</Select>
+			/>
 		);
 	}
-
 	getValue = () => {
 		return this.state.value;
 	};
