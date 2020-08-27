@@ -2,12 +2,16 @@
 	width: 100%;
 }
 
+.table-container .ant-table {
+	overflow: auto;
+}
+
 /*边界样式*/
 .table-container .ant-table-content table {
 	border-collapse: collapse;
 }
 
-.table-container .ant-table-content {
+.table-container .ant-table {
 	border: solid 1px #dcdcdc;
 }
 
@@ -15,14 +19,17 @@
 .table-container .ant-table-thead > tr.com-table-header-row > th {
 	font-weight: bold;
 	text-align: center;
-	padding: 10px 20px;
+	padding: 10px;
 	border-bottom: solid 1px #ddd;
 	border-left: solid 1px #fff;
 	background-color: #eff3f9;
 	color: #444;
 }
 
-.table-container .ant-table-thead > tr.com-table-header-row > th:first-child {
+.table-container
+	.ant-table-thead
+	> tr.com-table-header-row:first-child
+	> th:first-child {
 	border-left: none;
 }
 
@@ -35,6 +42,17 @@
 	border-bottom: solid 1px #ddd;
 	/*修补*/
 	height: 35px;
+}
+
+.table-container .ant-table-thead > tr.com-table-header-row > th,
+.table-container .ant-table-tbody > tr.com-table-row > td {
+	min-width: 120px;
+}
+
+.table-container .ant-table-thead > tr.com-table-header-row > th:first-child,
+.table-container .ant-table-tbody > tr.com-table-row > td:first-child {
+	min-width: 50px;
+	white-space: nowrap;
 }
 
 .table-container .ant-table-tbody > tr.com-table-row > td:first-child {

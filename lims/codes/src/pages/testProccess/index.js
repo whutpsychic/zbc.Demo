@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import testProccesstestMission from './testProccess-testMission'
-import testProccessweigh from './testProccess-weigh'
+import testProccessweight from './testProccess-weight'
 import testProccessproccessingTest from './testProccess-proccessingTest'
 import testProccesssampleInput from './testProccess-sampleInput'
 import testProccessmissionSubmit from './testProccess-missionSubmit'
@@ -17,7 +17,7 @@ class Default extends React.Component {
 		return (
 			<Switch>
 			<Route path={rootUrl+'/testProccess/testMission'} component={testProccesstestMission} />
-<Route path={rootUrl+'/testProccess/weigh'} component={testProccessweigh} />
+<Route path={rootUrl+'/testProccess/weight'} component={testProccessweight} />
 <Route path={rootUrl+'/testProccess/proccessingTest'} component={testProccessproccessingTest} />
 <Route path={rootUrl+'/testProccess/sampleInput'} component={testProccesssampleInput} />
 <Route path={rootUrl+'/testProccess/missionSubmit'} component={testProccessmissionSubmit} />

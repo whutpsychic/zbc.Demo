@@ -18,7 +18,7 @@
     "redux": "^4.0.5"
   },
   "scripts": {
-    "testm": "node ./scripts/createMenu.js && node ./scripts/createFilesByMenujs.js",
+    "tmenu": "node ./scripts/createMenu.js && node ./scripts/createFilesByMenujs.js",
     "menu": "node ./scripts/createMenu.js && node ./scripts/createFilesByMenujs.js",
     "start": "craco  start",
     "build": "craco  build",

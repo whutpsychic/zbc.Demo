@@ -3,14 +3,12 @@ import { message } from "antd";
 import { connect } from "react-redux";
 import {
 	shrinkLeftMenu,
-	setLanguage,
 	setAlertData,
 	setMsgData
 } from "../../redux/actions.js";
 import { Menu, Dropdown } from "antd";
 import { DownOutlined, LoadingOutlined } from "@ant-design/icons";
 import LanguageFlags from "../../components/LanguageFlags";
-import locale from "../../locale.js";
 import dao from "./dao-for-TopHeader.js";
 
 import sh from "../../imgs/left-menu-shrink.png";
@@ -124,7 +122,7 @@ class Default extends React.Component {
 
 	render() {
 		const { shrinkLeftMenu } = this.props;
-		const { language, alertData, msgData } = this.props;
+		const { alertData, msgData } = this.props;
 		const { loadingMsgData, loadingAlertData, userName } = this.state;
 
 		return (

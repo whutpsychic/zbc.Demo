@@ -18,8 +18,13 @@
 	width: 150px;
 }
 
+/*fixed*/
+.conditions-container .left-conditions li > div {
+	width: 100%;
+}
+
 .conditions-container .left-conditions li.date-range-li {
-	width: 300px;
+	width: 308px;
 }
 
 /*.conditions-container .left-conditions li label {

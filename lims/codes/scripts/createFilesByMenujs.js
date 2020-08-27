@@ -175,16 +175,34 @@ fs.readFile(position, (err, data) => {
 				}
 			});
 			// 再写入整个的根目录(不判定是否存在，直接覆盖)
-			fs.writeFile(
-				`${writePosition}/${item.address}/index.js`,
-				createIndexTemplate(item),
-				err => {
+
+			//如果目标不存在则创建目标目录
+			if (!fs.existsSync(`${writePosition}/${item.address}`)) {
+				fs.mkdir(`${writePosition}/${item.address}/`, null, err => {
 					if (err) throw err;
-					// console.log(
-					// 	`已成功写入文件${writePosition}/${item.address}/index.js`
-					// );
-				}
-			);
+					fs.writeFile(
+						`${writePosition}/${item.address}/index.js`,
+						createIndexTemplate(item),
+						err => {
+							if (err) throw err;
+							// console.log(
+							// 	`已成功写入文件${writePosition}/${item.address}/index.js`
+							// );
+						}
+					);
+				});
+			} else {
+				fs.writeFile(
+					`${writePosition}/${item.address}/index.js`,
+					createIndexTemplate(item),
+					err => {
+						if (err) throw err;
+						// console.log(
+						// 	`已成功写入文件${writePosition}/${item.address}/index.js`
+						// );
+					}
+				);
+			}
 		}
 	});
 

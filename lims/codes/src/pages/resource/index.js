@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import resourceinWarehouse from './resource-inWarehouse'
-import resourcestorage from './resource-storage'
-import resourceoutWarehouse from './resource-outWarehouse'
-import resourcedeviceAccount from './resource-deviceAccount'
-import resourcetestRecord from './resource-testRecord'
-import resourcerepaire from './resource-repaire'
-import resourceoperation from './resource-operation'
+import resourceconsumablesinWarehouse from './resource-consumables-inWarehouse'
+import resourceconsumablesstorage from './resource-consumables-storage'
+import resourceconsumablesoutWarehouse from './resource-consumables-outWarehouse'
+import resourcedeviceaccount from './resource-device-account'
+import resourcedevicetestRecord from './resource-device-testRecord'
+import resourcedevicerepaire from './resource-device-repaire'
+import resourcedeviceoperation from './resource-device-operation'
 
 import { rootUrl } from "../../config.js";
 
@@ -15,14 +15,14 @@ class Default extends React.Component {
 	render() {
 		return (
 			<Switch>
-			<Route path={rootUrl+'/resource/inWarehouse'} component={resourceinWarehouse} />
-<Route path={rootUrl+'/resource/storage'} component={resourcestorage} />
-<Route path={rootUrl+'/resource/outWarehouse'} component={resourceoutWarehouse} />
-<Route path={rootUrl+'/resource/deviceAccount'} component={resourcedeviceAccount} />
-<Route path={rootUrl+'/resource/testRecord'} component={resourcetestRecord} />
-<Route path={rootUrl+'/resource/repaire'} component={resourcerepaire} />
-<Route path={rootUrl+'/resource/operation'} component={resourceoperation} />
-	<Redirect from={rootUrl+"/resource"} to={"/resource/inWarehouse"} />
+			<Route path={rootUrl+'/resource/consumables/inWarehouse'} component={resourceconsumablesinWarehouse} />
+<Route path={rootUrl+'/resource/consumables/storage'} component={resourceconsumablesstorage} />
+<Route path={rootUrl+'/resource/consumables/outWarehouse'} component={resourceconsumablesoutWarehouse} />
+<Route path={rootUrl+'/resource/device/account'} component={resourcedeviceaccount} />
+<Route path={rootUrl+'/resource/device/testRecord'} component={resourcedevicetestRecord} />
+<Route path={rootUrl+'/resource/device/repaire'} component={resourcedevicerepaire} />
+<Route path={rootUrl+'/resource/device/operation'} component={resourcedeviceoperation} />
+	<Redirect from={rootUrl+"/resource"} to={"/resource/consumables"} />
 			</Switch>
 		);
 	}

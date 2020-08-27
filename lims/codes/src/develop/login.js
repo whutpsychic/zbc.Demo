@@ -1,8 +1,6 @@
 import React from "react";
 import tool from "../tool";
 import "./login.css";
-import { Dropdown } from "antd";
-import { DownOutlined } from "@ant-design/icons";
 import LanguageFlags from "../components/LanguageFlags/index";
 
 import loginText from "../imgs/login-text.png";

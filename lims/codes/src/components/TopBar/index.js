@@ -49,7 +49,7 @@ class Default extends React.Component {
 Default.TopBarLeft = TopBarLeft;
 Default.TopBarRight = TopBarRight;
 // ===================================================================
-const itemWidth = 140;
+const itemWidth = 150;
 const itemHeight = 32;
 const dateRangeWidth = 356;
 // ===================================================================
@@ -134,6 +134,34 @@ class TopBarDatePicker extends React.Component {
 	};
 }
 
+//日期——月份选择框
+class TopBarMonthPicker extends React.Component {
+	componentDidMount() {
+		const { onRef } = this.props;
+		if (typeof onRef === "function") onRef(this);
+	}
+	render() {
+		const { label } = this.props;
+		return (
+			<li className="date-picker-li">
+				{/*label ? <label>{label}</label> : null*/}
+				<DatePicker
+					ref="date-picker"
+					picker="month"
+					placeholder={label}
+					style={{
+						width: `${itemWidth}px`,
+						height: `${itemHeight}px`
+					}}
+				/>
+			</li>
+		);
+	}
+	getValue = () => {
+		return this.refs["date-picker"].getValue();
+	};
+}
+
 //日期——日期区间选择框
 class TopBarDateRange extends React.Component {
 	componentDidMount() {
@@ -164,5 +192,6 @@ Default.Input = TopBarInput;
 Default.Select = TopBarSelect;
 Default.DatePicker = TopBarDatePicker;
 Default.DateRange = TopBarDateRange;
+Default.MonthPicker = TopBarMonthPicker;
 
 export default Default;

@@ -39,27 +39,29 @@ class Default extends React.Component {
 					<div
 						className={shrinkLeftMenu ? "main-content no-left" : "main-content"}
 					>
-						<Switch>
-							<Route path={rootUrl + "/baseData"} component={baseData} />
-							<Route path={rootUrl + "/contract"} component={contract} />
-							<Route path={rootUrl + "/file"} component={file} />
-							<Route path={rootUrl + "/home"} component={home} />
-							<Route path={rootUrl + "/mission"} component={mission} />
-							<Route path={rootUrl + "/quality"} component={quality} />
-							<Route path={rootUrl + "/report"} component={report} />
-							<Route path={rootUrl + "/resource"} component={resource} />
-							<Route path={rootUrl + "/sample"} component={sample} />
-							<Route path={rootUrl + "/standard"} component={standard} />
-							<Route
-								path={rootUrl + "/standardRoom"}
-								component={standardRoom}
-							/>
-							<Route path={rootUrl + "/statistics"} component={statistics} />
-							<Route
-								path={rootUrl + "/testProccess"}
-								component={testProccess}
-							/>
-						</Switch>
+						<div className={"main-content-inner"}>
+							<Switch>
+								<Route path={rootUrl + "/baseData"} component={baseData} />
+								<Route path={rootUrl + "/contract"} component={contract} />
+								<Route path={rootUrl + "/file"} component={file} />
+								<Route path={rootUrl + "/home"} component={home} />
+								<Route path={rootUrl + "/mission"} component={mission} />
+								<Route path={rootUrl + "/quality"} component={quality} />
+								<Route path={rootUrl + "/report"} component={report} />
+								<Route path={rootUrl + "/resource"} component={resource} />
+								<Route path={rootUrl + "/sample"} component={sample} />
+								<Route path={rootUrl + "/standard"} component={standard} />
+								<Route
+									path={rootUrl + "/standardRoom"}
+									component={standardRoom}
+								/>
+								<Route path={rootUrl + "/statistics"} component={statistics} />
+								<Route
+									path={rootUrl + "/testProccess"}
+									component={testProccess}
+								/>
+							</Switch>
+						</div>
 					</div>
 				</div>
 			</React.Fragment>

@@ -3,16 +3,6 @@
   合同受理 acceptance
   合同评审 review
   合同查询 query
-  测试三级菜单 zzzzzzz
-    三级菜单1 bbbbbb1
-    三级菜单2 cccccc2
-    三级菜单3 cccccc3
-    三级菜单4 cccccc4
-    三级菜单5 cccccc5
-    三级菜单6 cccccc6
-    三级菜单7 cccccc7
-    三级菜单8 cccccc8
-    三级菜单9 cccccc9
 样品管理 sample
   样品登记 register
   样品录入 input
@@ -26,7 +16,7 @@
   任务查询 query
 检验过程管理 testProccess
   检验任务确认 testMission
-  样品称重 weigh
+  样品称重 weight
   过程检验 proccessingTest
   生产快样录入 sampleInput
   检验任务提交 missionSubmit
@@ -43,23 +33,27 @@
   检验标准 testStandard
   模板管理 template
 质量活动管理 quality
-  质控任务管理 mission
-  质量抽检 checkout
-  质检对比 compaire
-  质控图管理 picture
-  内部评审管理 innerExamine
-  管理评审 examine
-  不符合项管理 inconformity
-  纠正措施管理 correct
-  质量异议处理 objection
+  质量控制管理 control
+    质控任务管理 mission
+    质量抽检 checkout
+    质检对比 compaire
+    质控图管理 picture
+  质量评审管理 examine
+    内部评审管理 innerExamine
+    管理评审 examine
+    不符合项管理 inconformity
+    纠正措施管理 correct
+    质量异议处理 objection
 检验资源管理 resource
-  试剂耗材入库管理 inWarehouse
-  试剂耗材库存管理 storage
-  出库记录 outWarehouse
-  设备台账 deviceAccount
-  校准及检定记录 testRecord
-  维修管理 repaire
-  操作记录 operation
+  试剂耗材管理 consumables
+    入库管理 inWarehouse
+    库存管理 storage
+    出库记录 outWarehouse
+  设备管理 device
+    设备台账 account
+    校准及检定记录 testRecord
+    维修管理 repaire
+    操作记录 operation
 文件管理 file
   文件上传 upload
   文件下载 download

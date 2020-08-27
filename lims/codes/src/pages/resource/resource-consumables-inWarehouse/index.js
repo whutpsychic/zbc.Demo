@@ -12,7 +12,7 @@ const { Select, Input, DateRange } = TopBar;
 
 // 列配置
 const colString =
-	"序号	状态	收样日期	样品批号	检测编号	样品名称	样品条码	样品原重	单位	加工方式	加工重量	损耗重量	加工人	加工时间	备注";
+	"序号	物资类型	物资编号	物资名称	规格型号	条码	入库数量	单位	库位码	金额（元）	是否验收	有效期	申请部门	受理人	受理日期	备注";
 
 const columns = colString.split("	").map((item, i) => {
 	return { title: `${item}`, dataIndex: `string${i}`, key: `c1key${i}` };
@@ -37,7 +37,7 @@ class Default extends React.Component {
 		const { dataSource } = this.state;
 		return (
 			<Fragment>
-				<PageTitle title="样品加工" />
+				<PageTitle title="入库管理" />
 				<Breadcrumb />
 				<div className="page-container">
 					<TopBar>
