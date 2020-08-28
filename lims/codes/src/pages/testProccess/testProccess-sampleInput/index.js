@@ -9,12 +9,39 @@ import dao from "./dao";
 
 const { TopBarLeft, TopBarRight } = TopBar;
 const { Select, Input, DateRange } = TopBar;
+const { Color } = Table;
 
 // 列配置
 const colString =
 	"序号	状态	样品名称	样品原号	检测项目	检测结果	单位	复检结果	送样单位	检测人	检测班组	录入时间	复检时间	备注";
 
+const renderColor = data => {
+	let { round, random } = Math;
+	let randomNum = round(6 * random());
+	switch (randomNum) {
+		case 0:
+			return <Color text="待检测" color="orange" />;
+		case 1:
+			return <Color text="待发送" color="orange" />;
+		case 2:
+			return <Color text="已检测" color="green" />;
+		case 3:
+			return <Color text="已发送" color="green" />;
+		default:
+			return <Color text="未知状态" color="default" />;
+	}
+};
+
 const columns = colString.split("	").map((item, i) => {
+	if (i === 2)
+		return {
+			title: `${item}`,
+			dataIndex: `string${i}`,
+			key: `c1key${i}`,
+			render: (data, line, j) => {
+				return renderColor(data);
+			}
+		};
 	return { title: `${item}`, dataIndex: `string${i}`, key: `c1key${i}` };
 });
 

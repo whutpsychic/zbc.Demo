@@ -121,11 +121,16 @@ header.top-header .logo-container > img.logo {
 	background-color: #f0f2f7;
 }
 /***********************left-menu**************************/
+
 .left-menu-container {
-	width: 230px;
+	width: 250px;
 	height: calc(100vh - 60px);
-	overflow: auto;
+	overflow: hidden;
 	transition: 0.2s;
+}
+
+.left-menu-container:hover {
+	overflow: auto;
 }
 
 .left-menu-container.hide {
@@ -141,7 +146,7 @@ header.top-header .logo-container > img.logo {
 	display: block;
 	overflow: auto;
 	transition: 0.2s;
-	width: calc(100% - 230px);
+	width: calc(100% - 250px);
 	height: 100%;
 }
 

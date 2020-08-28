@@ -106,3 +106,52 @@ li.ant-pagination-next.ant-pagination-disabled[aria-disabled="true"]
 .ant-pagination-item.ant-pagination-item-active a {
 	color: #fff;
 }
+/*============================行内操作按钮=================================*/
+.table-container .table-opbtns-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.table-container .table-operation-btn {
+	cursor: pointer;
+	display: inline-block;
+	color: #389edc;
+	text-decoration: underline;
+	margin: 0 4px;
+}
+
+.table-container .table-operation-btn.disabled {
+	color: #ddd;
+	cursor: not-allowed;
+}
+
+.table-container .split-line {
+	display: inline-block;
+	width: 1px;
+	height: 16px;
+	background-color: #ddd;
+}
+/*============================行内色块文字=================================*/
+.table-container .table-color-text {
+	display: block;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.table-container .table-color-text.red {
+	color: #ab2020;
+}
+
+.table-container .table-color-text.green {
+	color: #278600;
+}
+
+.table-container .table-color-text.orange {
+	color: #f49f26;
+}
+
+.table-container .table-color-text.default {
+	color: #ccc;
+}

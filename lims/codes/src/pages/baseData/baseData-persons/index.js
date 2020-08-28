@@ -9,14 +9,11 @@ import dao from "./dao";
 
 const { TopBarLeft, TopBarRight } = TopBar;
 const { Select, Input, DateRange } = TopBar;
+const { OperationBtn } = Table;
 
 // 列配置
 const colString =
 	"序号	人员编号	姓名	性别	所属部门	岗位	学历	所学专业	职称	检验能力	证书	工作年限	检验员上岗证证号/内审员证号	是否在岗	详情	备注";
-
-const columns = colString.split("	").map((item, i) => {
-	return { title: `${item}`, dataIndex: `string${i}`, key: `c1key${i}` };
-});
 
 class Default extends React.Component {
 	state = {
@@ -32,6 +29,26 @@ class Default extends React.Component {
 			if (this.refs.table) this.refs.table.loaded();
 		});
 	}
+
+	onClickView = (data, line, i) => {
+		console.log(data, line, i);
+	};
+
+	columns = colString.split("	").map((item, i) => {
+		//详情
+		if (i === 14)
+			return {
+				title: `${item}`,
+				dataIndex: `string${i}`,
+				key: `c1key${i}`,
+				operations: [
+					{ text: "查看", fn: this.onClickView, disabled: true },
+					{ text: "操作", fn: this.onClickView }
+				]
+			};
+
+		return { title: `${item}`, dataIndex: `string${i}`, key: `c1key${i}` };
+	});
 
 	render() {
 		const { dataSource } = this.state;
@@ -84,7 +101,7 @@ class Default extends React.Component {
 					</TopBar>
 					<Table
 						ref="table"
-						columns={columns}
+						columns={this.columns}
 						dataSource={dataSource}
 						selectable
 					/>

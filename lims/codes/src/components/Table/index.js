@@ -52,13 +52,60 @@ class Default extends React.Component {
 	};
 
 	render() {
-		const { dataSource, selectable } = this.props;
+		const { dataSource, selectable, columns } = this.props;
 		const { loading } = this.state;
 		let _dataSource = supplement(dataSource);
+
+		//装填按钮
+
+		let preColumnsForAntd = columns.map(item => {
+			//确保有需要渲染的按钮
+			if (
+				item.operations &&
+				item.operations instanceof Array &&
+				item.operations.length
+			) {
+				item.render = (data, line, i) => {
+					return (
+						<div className="table-opbtns-container">
+							{item.operations.map((opitem, j) => {
+								if (!j)
+									return (
+										<OperationBtn
+											key={`opk${j}`}
+											text={opitem.text}
+											disabled={opitem.disabled}
+											onClick={() => {
+												opitem.fn(data, line, i);
+											}}
+										/>
+									);
+								return (
+									<React.Fragment key={`opk${j}`}>
+										<div className="split-line" />
+										<OperationBtn
+											text={opitem.text}
+											disabled={opitem.disabled}
+											onClick={() => {
+												opitem.fn(data, line, i);
+											}}
+										/>
+									</React.Fragment>
+								);
+							})}
+						</div>
+					);
+				};
+				return item;
+			}
+			return item;
+		});
+
 		return (
 			<div className="table-container">
 				<Table
 					{...this.props}
+					columns={preColumnsForAntd}
 					loading={loading}
 					dataSource={_dataSource}
 					rowClassName={"com-table-row"}
@@ -85,7 +132,6 @@ class Default extends React.Component {
 	}
 
 	onSelectRow = row => {
-		console.log(row)
 		const { selectedRows } = this.state;
 		if (itHas(selectedRows, row)) {
 			let resultArr = getItOff(selectedRows, row);
@@ -100,9 +146,6 @@ class Default extends React.Component {
 	};
 
 	onSelectAllRow = (bool, data, allData) => {
-		console.log(bool)
-		console.log(data)
-		console.log(allData)
 		const { selectedRows } = this.state;
 		// 如果选中了当前页所有
 		if (bool) {
@@ -139,5 +182,37 @@ class Default extends React.Component {
 		});
 	};
 }
+// =============================================================
+// 行内操作按钮
+const OperationBtn = props => {
+	const { onClick, disabled, text } = props;
+	return (
+		<span
+			className={
+				disabled ? "table-operation-btn disabled" : "table-operation-btn"
+			}
+			onClick={() => {
+				if (typeof onClick === "function" && !disabled) {
+					onClick();
+				}
+			}}
+		>
+			{text}
+		</span>
+	);
+};
+// =============================================================
+// 行内色块文字
+const Color = props => {
+	const { text, color } = props;
+	return (
+		<span className={color ? `table-color-text ${color}` : `table-color-text`}>
+			{text}
+		</span>
+	);
+};
+
+Default.OperationBtn = OperationBtn;
+Default.Color = Color;
 
 export default Default;
