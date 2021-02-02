@@ -4,36 +4,42 @@ import Breadcrumb from "../../../components/Breadcrumb";
 import TopBar from "../../../components/TopBar";
 import Button from "../../../components/Btns";
 import Table from "../../../components/Table";
+import Window from "../../../components/Window";
 
 import dao from "./dao";
 
 const { TopBarLeft, TopBarRight } = TopBar;
 const { Select, Input } = TopBar;
 
-// 列配置
-const columns = [
-	"序号",
-	"合同状态",
-	"合同编号",
-	"合同模板类型",
-	"总样品编号",
-	"总样品名称",
-	"检测项目",
-	"受检单位",
-	"联系人",
-	"联系电话",
-	"生效时间",
-	"完成时间",
-	"录入人",
-	"录入时间"
-].map((item, i) => {
-	return { key: `key${i}`, title: `${item}`, dataIndex: `string${i}` };
-});
-
 class Default extends React.Component {
 	state = {
 		dataSource: []
 	};
+
+	// 列配置
+	columns = `序号	合同状态	合同编号	合同模板类型	总样品编号	总样品名称	检测项目	委托单位	方法依据	设备要求	人员要求	可否分包	要求完成时间	委托时间	联系人	联系电话	录入人	录入时间	备注
+`
+		.split("	")
+		.map((item, i) => {
+			if (i === 2)
+				return {
+					key: `key${i}`,
+					title: `${item}`,
+					dataIndex: `string${i}`,
+					render: data => {
+						return <a onClick={this.onClickCode}>{data}</a>;
+					}
+				};
+			return { key: `key${i}`, title: `${item}`, dataIndex: `string${i}` };
+		});
+
+	// 窗口表列配置
+	windowColumns = `序号	样品名称	样品编号	检测项目	方法依据	检测仪器
+`
+		.split("	")
+		.map((item, i) => {
+			return { key: `key${i}${i}`, title: `${item}`, dataIndex: `string${i}` };
+		});
 
 	componentDidMount() {
 		this.refs.table.loading();
@@ -51,7 +57,7 @@ class Default extends React.Component {
 			<Fragment>
 				<PageTitle title="合同受理" />
 				<Breadcrumb />
-				<div className="page-container">
+				<div className="page-container contract-acceptance">
 					<TopBar>
 						<TopBarLeft ref="conditions">
 							<Select label={"合同状态"} field="string0" />
@@ -73,8 +79,17 @@ class Default extends React.Component {
 							<Button type="cancel" num={7} text="取消" />
 						</TopBarRight>
 					</TopBar>
-					<Table ref="table" columns={columns} dataSource={dataSource} />
+					<Table ref="table" columns={this.columns} dataSource={dataSource} />
 				</div>
+				<Window ref="window" title="合同详情">
+					<div className="table-in-window">
+						<Table
+							ref="table2"
+							columns={this.windowColumns}
+							dataSource={dataSource}
+						/>
+					</div>
+				</Window>
 			</Fragment>
 		);
 	}
@@ -82,6 +97,10 @@ class Default extends React.Component {
 	onClickQuery = () => {
 		let conditions = this.refs.conditions.getConditions();
 		console.log(conditions);
+	};
+
+	onClickCode = () => {
+		this.refs.window.show();
 	};
 }
 

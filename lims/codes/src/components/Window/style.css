@@ -1,0 +1,70 @@
+.window-container-outer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/*fixed up for antd*/
+	z-index: 11;
+}
+
+.window-container-outer.hide,
+.window-container.hide {
+	display: none;
+}
+
+.window-container-outer .msk {
+	z-index: -1;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.window-container {
+	display: block;
+	width: 80vw;
+	height: 80vh;
+	/*min-width: 680px;
+	min-height: 450px;*/
+	background-color: #fff;
+	border-radius: 4px;
+	transition: 0.3s;
+	animation: moveIn 0.3s cubic-bezier(0.42, 0.55, 0.02, 0.99);
+}
+
+.window-container .window-title {
+	font-size: 18px;
+	font-weight: bold;
+	height: 48px;
+	line-height: 48px;
+	text-indent: 20px;
+	color: #333;
+	background-color: #389edc;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.window-container .window-main-contents {
+	padding: 20px;
+	overflow: auto;
+	width: 100%;
+	height: calc(100% - 48px);
+}
+
+@keyframes moveIn {
+	from {
+		width: 10vw;
+		height: 10vw;
+	}
+	to {
+		width: 80vw;
+		height: 80vh;
+	}
+}

@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
+import "./style.css";
+// import TitleText from "./TitleText.js";
+// import Panel1 from "./Panel.js";
 
-class Default extends React.Component {
-
+class Default extends Component {
 	render() {
-		return <p>首页</p>;
+		return (
+	<p>主页</p>
+		);
 	}
 }
 

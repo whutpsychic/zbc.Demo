@@ -133,6 +133,10 @@ li.ant-pagination-next.ant-pagination-disabled[aria-disabled="true"]
 	height: 16px;
 	background-color: #ddd;
 }
+
+.table-container .ant-table-tbody > tr.com-table-row > td a {
+	text-decoration: underline;
+}
 /*============================行内色块文字=================================*/
 .table-container .table-color-text {
 	display: block;
